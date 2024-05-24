@@ -61,9 +61,12 @@ body {
 
 .container {
     margin-left: 220px;
-    margin-top: 20px!important;
+    margin-top: 0 !important;
     width: calc(100% - 240px);
     min-height: calc(100vh - 70px); /* Adjusted to keep footer at bottom */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the individual cards */
 }
 
 .padding {
@@ -77,12 +80,16 @@ body {
 
 .opportunity-card {
     max-width: 100%;
+    width: 80%; /* Adjust this width as needed */
     background-color: white;
     border: 1px solid #ddd;
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .opportunity-card:hover {
@@ -129,7 +136,8 @@ footer {
 
 .footer-logo-container img {
     height: 60px; /* Slightly bigger logo */
-    width: 100%; /* Ensure the image does not stretch */
+    width: 100%; /* Set image width to 100% */
+    max-width: 350px; /* Ensure the image does not stretch */
 }
 
 .footer-container {
@@ -193,6 +201,7 @@ footer a {
     .container {
         margin-left: 0;
         width: 100%;
+        align-items: center; /* Center the individual cards */
     }
 
     .footer-container {
@@ -211,6 +220,10 @@ footer a {
 
     .social-icons {
         margin-top: 10px;
+    }
+
+    .opportunity-card {
+        width: 90%; /* Adjust width for medium screens */
     }
 }
 
@@ -224,6 +237,7 @@ footer a {
     .container {
         margin-left: 0;
         width: 100%;
+        align-items: center; /* Center the individual cards */
     }
 
     .footer-container {
@@ -243,6 +257,10 @@ footer a {
     .social-icons {
         margin-top: 10px;
     }
+
+    .opportunity-card {
+        width: 95%; /* Adjust width for smaller screens */
+    }
 }
 
 @media (max-width: 576px) {
@@ -252,5 +270,16 @@ footer a {
 
     .container {
         padding: 10px;
+        align-items: center; /* Center the individual cards */
+    }
+
+    .opportunity-card {
+        width: 100%; /* Adjust width for extra small screens */
+    }
+}
+
+@media (min-width: 576px) {
+    .container {
+        max-width: none !important;
     }
 }
