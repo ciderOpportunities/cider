@@ -17,18 +17,20 @@ body {
 }
 
 .navbar {
-    background-color: #fff !important;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     z-index: 1000;
     position: sticky;
     top: 0;
     width: 100%;
     padding: 0 20px;
+   
 }
 
+
 .navbar-brand img {
-    height: 60px;
+    height: 40px;
     margin-right: 20px;
+    
 }
 
 .navbar-toggler {
@@ -336,6 +338,9 @@ footer a {
 @media (max-width: 576px) {
     .sidebar {
         padding: 10px;
+    }
+    .navbar-brand img{
+        max-width: 220px;
     }
 
     .container {
