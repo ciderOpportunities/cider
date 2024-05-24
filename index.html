@@ -163,64 +163,76 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
   <script>
     document.querySelectorAll('input[name="filter"]').forEach(input => {
-      input.addEventListener('change', function() {
+    input.addEventListener('change', function() {
         const filterValue = this.value;
         const cards = document.querySelectorAll('.opportunity-card');
         let hasResults = false;
 
         cards.forEach(card => {
-          if (filterValue === 'all') {
-            card.style.display = 'block';
-            hasResults = true;
-          } else if (card.classList.contains(filterValue)) {
-            card.style.display = 'block';
-            hasResults = true;
-          } else {
-            card.style.display = 'none';
-          }
+            if (filterValue === 'all') {
+                card.style.display = 'block';
+                hasResults = true;
+            } else if (card.classList.contains(filterValue)) {
+                card.style.display = 'block';
+                hasResults = true;
+            } else {
+                card.style.display = 'none';
+            }
         });
 
         if (!hasResults) {
-          const noResultsMessage = document.createElement('div');
-          noResultsMessage.className = 'no-results';
-          noResultsMessage.innerHTML = '<p>No opportunities found for the selected filter.</p>';
-          document.querySelector('.container').appendChild(noResultsMessage);
+            const noResultsMessage = document.createElement('div');
+            noResultsMessage.className = 'no-results';
+            noResultsMessage.innerHTML = '<p>No opportunities found for the selected filter.</p>';
+            document.querySelector('.container').appendChild(noResultsMessage);
         } else {
-          const noResultsElement = document.querySelector('.no-results');
-          if (noResultsElement) {
-            noResultsElement.remove();
-          }
+            const noResultsElement = document.querySelector('.no-results');
+            if (noResultsElement) {
+                noResultsElement.remove();
+            }
         }
-      });
     });
+});
 
-    document.getElementById('searchButton').addEventListener('click', function() {
-      const searchValue = document.getElementById('searchInput').value.toLowerCase();
-      const cards = document.querySelectorAll('.opportunity-card');
-      let hasResults = false;
+document.getElementById('searchButton').addEventListener('click', function() {
+    performSearch();
+});
 
-      cards.forEach(card => {
+document.getElementById('searchInput').addEventListener('keypress', function(event) {
+    if (event.key === 'Enter') {
+        event.preventDefault();
+        performSearch();
+    }
+});
+
+function performSearch() {
+    const searchValue = document.getElementById('searchInput').value.toLowerCase();
+    const cards = document.querySelectorAll('.opportunity-card');
+    let hasResults = false;
+
+    cards.forEach(card => {
         const cardText = card.textContent.toLowerCase();
         if (cardText.includes(searchValue)) {
-          card.style.display = 'block';
-          hasResults = true;
+            card.style.display = 'block';
+            hasResults = true;
         } else {
-          card.style.display = 'none';
+            card.style.display = 'none';
         }
-      });
+    });
 
-      if (!hasResults) {
+    if (!hasResults) {
         const noResultsMessage = document.createElement('div');
         noResultsMessage.className = 'no-results';
         noResultsMessage.innerHTML = '<p>No opportunities found for the search term.</p>';
         document.querySelector('.container').appendChild(noResultsMessage);
-      } else {
+    } else {
         const noResultsElement = document.querySelector('.no-results');
         if (noResultsElement) {
-          noResultsElement.remove();
+            noResultsElement.remove();
         }
-      }
-    });
+    }
+}
+
   </script>
   <footer class="site-footer">
     <div class="footer-logo-container">
