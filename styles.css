@@ -30,6 +30,7 @@ body {
 .navbar-brand img {
     height: 40px;
     margin-right: 20px;
+
     
 }
 
@@ -346,9 +347,13 @@ footer a {
     }
 }
 
-@media (min-width: 576px) {
+@media (min-width: 992px) {
     .container {
         max-width: none !important;
+    }
+    .navbar-brand img {
+      height: 65px!important;
+        
     }
 }
 .navbar-toggler{
