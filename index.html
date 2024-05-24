@@ -24,8 +24,6 @@
           src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Hamburger_icon.svg/1200px-Hamburger_icon.svg.png"
           alt="Hamburger Menu" class="navbar-toggler" type="button" data-bs-toggle="collapse"
           data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <img>
-
       </div>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
@@ -45,7 +43,6 @@
       </div>
     </div>
   </nav>
-
 
   <div class="d-flex">
     <div class="sidebar">
@@ -74,7 +71,7 @@
     </div>
 
     <div class="container mt-5">
-      <div class="opportunity-card card mb-4 on-site">
+      <div class="opportunity-card card mb-4 on-site" data-bs-toggle="modal" data-bs-target="#opportunityModal">
         <div class="row g-0">
           <div class="col-md-4 d-flex align-items-center justify-content-center">
             <img src="images/irc.jpeg" class="img-fluid rounded-start" alt="Opportunity Image">
@@ -99,7 +96,7 @@
         </div>
       </div>
 
-      <div class="opportunity-card card mb-4 remote">
+      <div class="opportunity-card card mb-4 remote" data-bs-toggle="modal" data-bs-target="#remoteModal">
         <div class="row g-0">
           <div class="col-md-4 d-flex align-items-center justify-content-center">
             <img src="https://via.placeholder.com/150" class="img-fluid rounded-start" alt="Opportunity Image">
@@ -227,8 +224,7 @@
         <div class="modal-body">
           <p><strong>Supervisor:</strong> John Doe, Research Director</p>
           <p><strong>Duration:</strong> Summer term (June 1 – August 31, 2024)</p>
-          <p><strong>Application Materials:</strong> Send to <a
-              href="mailto:XYZ@organization.org">XYZ@organization.org</a> (i) a resume, (ii) academic transcript(s), and
+          <p><strong>Application Materials:</strong> Send to <a href="mailto:XYZ@organization.org">XYZ@organization.org</a> (i) a resume, (ii) academic transcript(s), and
             (iii) a statement of interest (not to exceed two pages)</p>
           <p><strong>Deadline:</strong> May 15, 2024</p>
           <!-- Add more detailed content here for the remote position -->
