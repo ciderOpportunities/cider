@@ -23,19 +23,31 @@ body {
     position: sticky;
     top: 0;
     width: 100%;
+    padding: 0 20px;
 }
 
 .navbar-brand img {
-    height: 40px;
+    height: 60px;
+    margin-right: 20px;
+}
+
+.navbar-toggler {
+    border: none;
+}
+
+.custom-toggler-icon {
+    background-image: url('images/hamburger.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 30px;
+    height: 30px;
 }
 
 .nav-link {
     color: #333 !important;
     font-weight: 700;
-}
-
-.navbar-toggler-icon {
-    background-color: #333 !important;
+    padding: 0 15px;
 }
 
 .header {
@@ -185,7 +197,8 @@ footer {
 
 .footer-logo-container img {
     height: 60px; /* Slightly bigger logo */
-    max-width: 350px!important; /* Ensure the image does not stretch */
+
+    max-width: 350px; /* Ensure the image does not stretch */
 }
 
 .footer-container {
@@ -339,4 +352,9 @@ footer a {
     .container {
         max-width: none !important;
     }
+}
+.navbar-toggler{
+    width: 50px;
+    height: 50px;
+    z-index: 10000;
 }
