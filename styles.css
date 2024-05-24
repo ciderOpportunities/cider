@@ -1,8 +1,11 @@
+/* Import Lato font */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+
 body, html {
     margin: 0;
     padding: 0;
     height: 100%;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Lato', sans-serif; /* Updated font */
     background-color: #f8f9fa;
 }
 
@@ -10,10 +13,12 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    color: #333;
 }
 
 .navbar {
-    background-color: white !important;
+    background-color: #fff !important;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     z-index: 1000;
     position: sticky;
     top: 0;
@@ -25,17 +30,20 @@ body {
 }
 
 .nav-link {
-    color: black !important;
-    font-weight: bold;
+    color: #333 !important;
+    font-weight: 700;
 }
 
 .navbar-toggler-icon {
-    background-color: black !important;
+    background-color: #333 !important;
 }
 
 .header {
     text-align: center;
     margin-top: 20px;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #b31b1b;
 }
 
 .d-flex {
@@ -44,29 +52,65 @@ body {
 }
 
 .sidebar {
-    width: 200px;
+    width: 230px; /* Increased width by 30px */
     padding: 20px;
-    background-color: #f1f1f1;
+    background-color: #fff;
+    border-right: 1px solid #ddd;
     height: calc(100vh - 70px); /* Adjusted height */
     position: fixed;
     top: 70px;
     left: 0;
     overflow: auto;
     z-index: 100;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
 }
 
 .sidebar h4 {
     margin-top: 20px;
+    font-weight: 700;
+    color: #b31b1b;
 }
 
 .container {
-    margin-left: 220px;
+    margin-left: 260px; /* Adjusted to match increased sidebar width */
     margin-top: 0 !important;
-    width: calc(100% - 240px);
+    width: calc(100% - 280px); /* Adjusted to match increased sidebar width */
     min-height: calc(100vh - 70px); /* Adjusted to keep footer at bottom */
     display: flex;
     flex-direction: column;
     align-items: center; /* Center the individual cards */
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.search-group {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.search-group input {
+    flex-grow: 1;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 8px;
+    font-size: 1rem;
+}
+
+.search-group button {
+    border-radius: 4px;
+    background-color: #b31b1b;
+    color: #fff;
+    font-weight: 700;
+    border: none;
+    padding: 8px 16px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search-group button:hover {
+    background-color: #a11a1a;
 }
 
 .padding {
@@ -81,7 +125,7 @@ body {
 .opportunity-card {
     max-width: 100%;
     width: 80%; /* Adjust this width as needed */
-    background-color: white;
+    background-color: #fff;
     border: 1px solid #ddd;
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -90,6 +134,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 20px;
 }
 
 .opportunity-card:hover {
@@ -99,12 +144,15 @@ body {
 }
 
 .card-body h5 {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     margin-bottom: 15px;
+    color: #b31b1b;
+    font-weight: 700;
 }
 
 .card-body p {
-    font-size: 0.9rem;
+    font-size: 1rem;
+    color: #666;
 }
 
 .modal-body ul {
@@ -113,6 +161,7 @@ body {
 
 .modal-body ul li {
     list-style-type: disc;
+    margin-bottom: 10px;
 }
 
 footer {
@@ -136,8 +185,8 @@ footer {
 
 .footer-logo-container img {
     height: 60px; /* Slightly bigger logo */
-    width: 100%; /* Set image width to 100% */
-    max-width: 350px; /* Ensure the image does not stretch */
+    width: 100px; /* Fixed width */
+    max-width: 100%; /* Ensure the image does not stretch */
 }
 
 .footer-container {
@@ -170,6 +219,11 @@ footer {
 .footer-section ul li a {
     color: #fff;
     text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+    color: #ddd;
 }
 
 .footer-bottom {
@@ -196,6 +250,8 @@ footer a {
         height: auto;
         position: relative;
         top: 0;
+        border-right: none;
+        box-shadow: none;
     }
 
     .container {
@@ -232,6 +288,8 @@ footer a {
         width: 100%;
         position: relative;
         top: 0;
+        border-right: none;
+        box-shadow: none;
     }
 
     .container {
