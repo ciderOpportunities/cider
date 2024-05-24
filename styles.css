@@ -65,14 +65,14 @@ body {
     width: calc(100% - 240px);
     min-height: calc(100vh - 70px); /* Adjusted to keep footer at bottom */
 }
-.padding{
+
+.padding {
     padding: 20px;
     max-height: 420px;
-
 }
-.image{
-    width: 100%;
 
+.image {
+    width: 100%;
 }
 
 .opportunity-card {
@@ -123,13 +123,13 @@ footer {
     padding: 10px 20px;
     display: flex;
     align-items: center;
-    height: 80px; /* Slightly bigger height */
-
+    height: 70px; /* Slightly bigger height */
+    justify-content: flex-start; /* Left align the image */
 }
 
 .footer-logo-container img {
     height: 60px; /* Slightly bigger logo */
-    width: 100%;
+    width: 100%; /* Ensure the image does not stretch */
 }
 
 .footer-container {
@@ -172,10 +172,10 @@ footer {
     background-color: #000;
     border-top: 1px solid #333;
 }
-footer a{
-    color:white!important;
-    text-decoration: underline!important;
 
+footer a {
+    color: white !important;
+    text-decoration: underline !important;
 }
 
 .footer-bottom p {
