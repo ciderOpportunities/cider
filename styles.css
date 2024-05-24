@@ -61,7 +61,7 @@ body {
 
 .container {
     margin-left: 220px;
-    margin-top: 20px;
+    margin-top: 20px!important;
     width: calc(100% - 240px);
     min-height: calc(100vh - 70px); /* Adjusted to keep footer at bottom */
 }
@@ -171,6 +171,11 @@ footer {
     padding: 10px 20px;
     background-color: #000;
     border-top: 1px solid #333;
+}
+footer a{
+    color:white!important;
+    text-decoration: underline!important;
+
 }
 
 .footer-bottom p {
