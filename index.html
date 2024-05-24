@@ -45,14 +45,13 @@
       padding: 10px;
       margin-top: 20px;
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-      transition: 1s;
-      
+      transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     }
     .opportunity-card:hover {
-      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-      scale: 1.1;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+      transform: translateY(-5px);
+      cursor: pointer;
     }
-
     .opportunity-header {
       background-color: darkred;
       color: white;
@@ -68,7 +67,6 @@
     .container {
       max-width: 500px;
       margin: 20px auto;
-     
     }
     h3 {
       font-size: 18px;
