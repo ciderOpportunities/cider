@@ -1,0 +1,251 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f8f9fa;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.navbar {
+    background-color: white !important;
+    z-index: 1000;
+    position: sticky;
+    top: 0;
+    width: 100%;
+}
+
+.navbar-brand img {
+    height: 40px;
+}
+
+.nav-link {
+    color: black !important;
+    font-weight: bold;
+}
+
+.navbar-toggler-icon {
+    background-color: black !important;
+}
+
+.header {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.d-flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.sidebar {
+    width: 200px;
+    padding: 20px;
+    background-color: #f1f1f1;
+    height: calc(100vh - 70px); /* Adjusted height */
+    position: fixed;
+    top: 70px;
+    left: 0;
+    overflow: auto;
+    z-index: 100;
+}
+
+.sidebar h4 {
+    margin-top: 20px;
+}
+
+.container {
+    margin-left: 220px;
+    margin-top: 20px;
+    width: calc(100% - 240px);
+    min-height: calc(100vh - 70px); /* Adjusted to keep footer at bottom */
+}
+.padding{
+    padding: 20px;
+    max-height: 420px;
+
+}
+.image{
+    width: 100%;
+    height:100%
+}
+
+.opportunity-card {
+    max-width: 100%;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    margin: 20px 0;
+}
+
+.opportunity-card:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    transform: translateY(-5px);
+    cursor: pointer;
+}
+
+.card-body h5 {
+    font-size: 1.25rem;
+    margin-bottom: 15px;
+}
+
+.card-body p {
+    font-size: 0.9rem;
+}
+
+.modal-body ul {
+    padding-left: 20px;
+}
+
+.modal-body ul li {
+    list-style-type: disc;
+}
+
+footer {
+    background-color: #111;
+    color: #fff;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    font-weight: 300; /* Thin font for the entire footer */
+    z-index: 1000;
+}
+
+.footer-logo-container {
+    background-color: #b31b1b; /* Dark red background color */
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    height: 80px; /* Slightly bigger height */
+
+}
+
+.footer-logo-container img {
+    height: 60px; /* Slightly bigger logo */
+    width: 100%;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    justify-content: space-between;
+}
+
+.footer-section {
+    flex: 1;
+    margin: 10px;
+    min-width: 150px;
+}
+
+.footer-section h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.footer-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 5px;
+}
+
+.footer-section ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #000;
+    border-top: 1px solid #333;
+}
+
+.footer-bottom p {
+    margin: 0;
+}
+
+@media (max-width: 992px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        top: 0;
+    }
+
+    .container {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-section {
+        margin: 10px 0;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+    }
+
+    .social-icons {
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        position: relative;
+        top: 0;
+    }
+
+    .container {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-section {
+        margin: 10px 0;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+    }
+
+    .social-icons {
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 576px) {
+    .sidebar {
+        padding: 10px;
+    }
+
+    .container {
+        padding: 10px;
+    }
+}
