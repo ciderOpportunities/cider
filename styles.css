@@ -7,11 +7,12 @@ body, html {
     height: 100%;
     font-family: 'Lato', sans-serif; /* Updated font */
     background-color: #f8f9fa;
-    
 }
-main{
-   max-width: auto;;
+
+main {
+    max-width: auto;
 }
+
 body {
     display: flex;
     flex-direction: column;
@@ -27,6 +28,7 @@ body {
     width: 100%;
     padding: 0 20px;
 }
+
 .nav {
     border-bottom: 1px solid black !important;
 }
@@ -60,7 +62,7 @@ body {
 }
 
 .sidebar {
-    width: 230px; /* Increased width by 30px */
+    width: 21%; /* Increased width by 30px */
     padding: 20px;
     background-color: #fff;
     border-right: 1px solid #ddd;
@@ -77,19 +79,24 @@ body {
     font-weight: 700;
     color: #b31b1b;
 }
+.search-group{
+    max-width: 530px;
+}
 
 .container {
-    margin-left: 260px; /* Adjusted to match increased sidebar width */
+    margin-left: 20%!important; /* Adjusted to match increased sidebar width */
     margin-top: 0 !important;
     width: calc(100% - 280px); /* Adjusted to match increased sidebar width */
+    max-width: 1200px; /* Set maximum width */
     min-height: calc(100vh - 70px); /* Adjusted to keep footer at bottom */
     display: flex;
     flex-direction: column;
     align-items: center; /* Center the individual cards */
     padding: 20px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-right: auto; /* Center container horizontally */
+    margin-left: auto; /* Center container horizontally */
 }
-
 
 .search-group {
     display: flex;
@@ -260,18 +267,19 @@ footer a {
         border-right: none;
         box-shadow: none;
     }
+    
     .filters-container {
         display: flex;
-     flex-direction: row;
+        flex-direction: row;
         width: 100%;
         margin-bottom: 20px;
     }
-    .col1{
+    .col1 {
         margin-right: 30%;
     }
 
     .container {
-        margin-left: 0;
+        margin-left: 0!important;
         width: 100%;
         align-items: center; /* Center the individual cards */
     }
@@ -341,7 +349,7 @@ footer a {
     .sidebar {
         padding: 10px;
     }
-    .navbar-brand img{
+    .navbar-brand img {
         max-width: 150px;
     }
 
@@ -359,10 +367,9 @@ footer a {
     .container {
         max-width: none !important;
     }
-
-  
 }
-.navbar-toggler{
+
+.navbar-toggler {
     width: 50px;
     height: 50px;
     z-index: 10000;
