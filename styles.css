@@ -614,6 +614,14 @@ footer a {
         top: 0;
         border-right: none;
     }
+    .filters-container{
+        display: flex;
+        flex-direction: row;
+        
+    }
+    .col1{
+        margin-right: 30%;
+    }
 
     .container {
         margin-left: 0;
