@@ -7,38 +7,38 @@ body, html {
     height: 100%;
     font-family: 'Lato', sans-serif; /* Updated font */
     background-color: #f8f9fa;
+    
 }
-
+main{
+   max-width: auto;;
+}
 body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
     color: #333;
+    padding-top: 70px; /* Add padding to prevent content from being hidden under the fixed navbar */
 }
 
 .navbar {
     background-color: #fff !important;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     z-index: 1000;
-    position: sticky;
-    top: 0;
     width: 100%;
     padding: 0 20px;
-    
+}
+.nav {
+    border-bottom: 1px solid black !important;
 }
 
 .navbar-brand img {
     height: 40px;
     margin-right: 20px;
-
-    
 }
 
 .navbar-toggler {
     border: none;
 }
-
-
 
 .nav-link {
     color: #333 !important;
@@ -53,6 +53,9 @@ body {
     font-weight: 700;
     color: #b31b1b;
 }
+.hamburger-container{
+    max-width: 250px!important;
+}
 
 .d-flex {
     display: flex;
@@ -64,13 +67,12 @@ body {
     padding: 20px;
     background-color: #fff;
     border-right: 1px solid #ddd;
-    height: calc(100vh - 70px); /* Adjusted height */
+    height: 100vh; /* Adjusted height */
     position: fixed;
- 
+    top: 70px; /* Adjust top to be below the fixed navbar */
     left: 0;
     overflow: auto;
     z-index: 100;
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
 }
 
 .sidebar h4 {
@@ -193,7 +195,6 @@ footer {
 
 .footer-logo-container img {
     height: 60px; /* Slightly bigger logo */
-
     max-width: 350px; /* Ensure the image does not stretch */
 }
 
@@ -334,7 +335,7 @@ footer a {
         padding: 10px;
     }
     .navbar-brand img{
-        max-width: 220px;
+        max-width: 150px;
     }
 
     .container {
@@ -351,9 +352,356 @@ footer a {
     .container {
         max-width: none !important;
     }
-    .navbar-brand img {
-      height: 65px!important;
-        
+  
+}
+.navbar-toggler{
+    width: 50px;
+    height: 50px;
+    z-index: 10000;
+}
+/* Import Lato font */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Lato', sans-serif; /* Updated font */
+    background-color: #f8f9fa;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    color: #333;
+    padding-top: 70px; /* Add padding to prevent content from being hidden under the fixed navbar */
+}
+
+.navbar {
+    background-color: #fff !important;
+    z-index: 1000;
+    width: 100%;
+    padding: 0 20px;
+    height: 70px; /* Increased height */
+    display: flex;
+    align-items: center;
+}
+
+.nav {
+    border-bottom: 1px solid black !important;
+}
+
+.navbar-brand img {
+    height: 40px;
+    margin-right: 20px;
+}
+
+.navbar-toggler {
+    border: none;
+}
+
+.nav-link {
+    color: #333 !important;
+    font-weight: 700;
+    padding: 0 15px;
+}
+
+.header {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #b31b1b;
+}
+
+.d-flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.sidebar {
+    width: 230px; /* Increased width by 30px */
+    padding: 20px;
+    background-color: #fff;
+    border-right: 1px solid #ddd;
+    height: 100vh; /* Adjusted height */
+    position: fixed;
+    top: 70px; /* Adjust top to be below the fixed navbar */
+    left: 0;
+    overflow: auto;
+    z-index: 100;
+}
+
+.sidebar h4 {
+    margin-top: 20px;
+    font-weight: 700;
+    color: #b31b1b;
+}
+
+.container {
+    margin-left: 230px; /* Adjusted to match sidebar width */
+    margin-top: 0 !important;
+    width: calc(100% - 230px); /* Adjusted to match sidebar width */
+    min-height: calc(100vh - 70px); /* Adjusted to keep footer at bottom */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the individual cards */
+    padding: 20px;
+}
+
+.search-group {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.search-group input {
+    flex-grow: 1;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 8px;
+    font-size: 1rem;
+}
+
+.search-group button {
+    border-radius: 4px;
+    background-color: #b31b1b;
+    color: #fff;
+    font-weight: 700;
+    border: none;
+    padding: 8px 16px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search-group button:hover {
+    background-color: #a11a1a;
+}
+
+.padding {
+    padding: 20px;
+    max-height: 420px;
+}
+
+.image {
+    width: 100%;
+}
+
+.opportunity-card {
+    max-width: 100%;
+    width: 100%; /* Set width to 100% */
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.opportunity-card:hover {
+    transform: translateY(-5px);
+    cursor: pointer;
+}
+
+.card-body h5 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #b31b1b;
+    font-weight: 700;
+}
+
+.card-body p {
+    font-size: 1rem;
+    color: #666;
+}
+
+.modal-body ul {
+    padding-left: 20px;
+}
+
+.modal-body ul li {
+    list-style-type: disc;
+    margin-bottom: 10px;
+}
+
+footer {
+    background-color: #111;
+    color: #fff;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    font-weight: 300; /* Thin font for the entire footer */
+    z-index: 1000;
+}
+
+.footer-logo-container {
+    background-color: #b31b1b; /* Dark red background color */
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    height: 70px; /* Slightly bigger height */
+    justify-content: flex-start; /* Left align the image */
+}
+
+.footer-logo-container img {
+    height: 60px; /* Slightly bigger logo */
+    max-width: 350px; /* Ensure the image does not stretch */
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    justify-content: space-between;
+}
+
+.footer-section {
+    flex: 1;
+    margin: 10px;
+    min-width: 150px;
+}
+
+.footer-section h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.footer-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 5px;
+}
+
+.footer-section ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+    color: #ddd;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #000;
+    border-top: 1px solid #333;
+}
+
+footer a {
+    color: white !important;
+    text-decoration: underline !important;
+}
+
+.footer-bottom p {
+    margin: 0;
+}
+
+@media (max-width: 992px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        top: 0;
+        border-right: none;
+    }
+
+    .container {
+        margin-left: 0;
+        width: 100%;
+        align-items: center; /* Center the individual cards */
+    }
+
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-section {
+        margin: 10px 0;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+    }
+
+    .social-icons {
+        margin-top: 10px;
+    }
+
+    .opportunity-card {
+        width: 90%; /* Adjust width for medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        position: relative;
+        top: 0;
+        border-right: none;
+    }
+
+    .container {
+        margin-left: 0;
+        width: 100%;
+        align-items: center; /* Center the individual cards */
+    }
+
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-section {
+        margin: 10px 0;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+    }
+
+    .social-icons {
+        margin-top: 10px;
+    }
+
+    .opportunity-card {
+        width: 95%; /* Adjust width for smaller screens */
+    }
+}
+
+@media (max-width: 576px) {
+    .sidebar {
+        padding: 10px;
+    }
+  
+
+    .container {
+        padding: 10px;
+        align-items: center; /* Center the individual cards */
+    }
+
+    .opportunity-card {
+        width: 100%; /* Adjust width for extra small screens */
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        max-width: none !important;
     }
 }
 .navbar-toggler{

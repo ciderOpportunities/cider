@@ -12,9 +12,9 @@
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-lg">
-    <div class="container-fluid navbar">
-      <a class="navbar-brand" href="https://business.cornell.edu/">
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
         <img src="https://business.cornell.edu/wp-content/themes/core/img/theme/logos/college-logo.svg"
           alt="Logo for Cornell SC Johnson College of Business"
           class="site-header__logo-graphic site-header__logo-graphic--college">
@@ -43,222 +43,358 @@
       </div>
     </div>
   </nav>
-
-  <div class="d-flex">
-    <div class="sidebar">
-      <h4>Filter by:</h4>
-      <div class="form-check">
-        <input class="form-check-input" type="radio" name="filter" id="filterAll" value="all" checked>
-        <label class="form-check-label" for="filterAll">All</label>
+  <main>
+    <div class="d-flex">
+      <div class="sidebar">
+        <h4>Filter by:</h4>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="filter" id="filterAll" value="all" checked>
+          <label class="form-check-label" for="filterAll">All</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="filter" id="filterOnSite" value="on-site">
+          <label class="form-check-label" for="filterOnSite">On-Site</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="filter" id="filterRemote" value="remote">
+          <label class="form-check-label" for="filterRemote">Remote</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="filter" id="filterHybrid" value="hybrid">
+          <label class="form-check-label" for="filterHybrid">Hybrid</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="filter" id="filterInternship" value="internship">
+          <label class="form-check-label" for="filterInternship">Internships</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="filter" id="filterPartTime" value="part-time">
+          <label class="form-check-label" for="filterPartTime">Part-Time</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="filter" id="filterFullTime" value="full-time">
+          <label class="form-check-label" for="filterFullTime">Full-Time</label>
+        </div>
+  
+        <h4>Search:</h4>
+        <div class="search-group">
+          <input type="text" id="searchInput" class="form-control" placeholder="Search Opp">
+          <button id="searchButton" class="btn btn-primary">Search</button>
+        </div>
       </div>
-      <div class="form-check">
-        <input class="form-check-input" type="radio" name="filter" id="filterOnSite" value="on-site">
-        <label class="form-check-label" for="filterOnSite">On-Site</label>
-      </div>
-      <div class="form-check">
-        <input class="form-check-input" type="radio" name="filter" id="filterRemote" value="remote">
-        <label class="form-check-label" for="filterRemote">Remote</label>
-      </div>
-      <div class="form-check">
-        <input class="form-check-input" type="radio" name="filter" id="filterHybrid" value="hybrid">
-        <label class="form-check-label" for="filterHybrid">Hybrid</label>
-      </div>
-      <h4>Search:</h4>
-      <div class="search-group">
-        <input type="text" id="searchInput" class="form-control" placeholder="Search opportunities">
-        <button id="searchButton" class="btn btn-primary">Search</button>
-      </div>
-    </div>
-
-    <div class="container mt-5">
-      <div class="opportunity-card card mb-4 on-site" data-bs-toggle="modal" data-bs-target="#opportunityModal">
-        <div class="row g-0">
-          <div class="col-md-4 d-flex align-items-center justify-content-center">
-            <img src="images/irc.jpeg" class="img-fluid rounded-start" alt="Opportunity Image">
+  
+      <div class="container mt-5">
+        <div class="opportunity-card card mb-4 on-site internship" data-bs-toggle="modal" data-bs-target="#opportunityModal">
+          <div class="row g-0">
+            <div class="col-md-4 d-flex align-items-center justify-content-center">
+              <img src="images/irc.jpeg" class="img-fluid rounded-start" alt="Opportunity Image">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title">Costing Analysis Evidence Mapping Intern with the <a href="https://www.rescue.org/"
+                    class="text-decoration-underline">International Rescue Committee (IRC)</a></h5>
+                <p class="card-text"><strong>IRC Supervisor:</strong> Mikaela Cochran, Advisor, Best Use of Resources</p>
+                <p class="card-text"><strong>CIDER Faculty Supervisors:</strong> <a
+                    href="https://barrett.dyson.cornell.edu/">Chris Barrett</a>, <a
+                    href="https://facultyprofiles.tufts.edu/jenny-aker">Jenny Aker</a></p>
+                <p class="card-text"><strong>Anticipated Duration:</strong> Fall term (August 26 – December 9, 2024)</p>
+                <p class="card-text"><strong>Application Materials:</strong> Send to <a
+                    href="mailto:CIDER@cornell.edu">CIDER@cornell.edu</a> (i) a resume, (ii) academic transcript(s), and
+                  (iii) a statement of interest (not to exceed two pages)</p>
+                <p class="card-text"><strong>Deadline:</strong> June 10, 2024</p>
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                  data-bs-target="#opportunityModal">Read More</button>
+              </div>
+            </div>
           </div>
-          <div class="col-md-8">
-            <div class="card-body">
-              <h5 class="card-title">Costing Analysis Evidence Mapping Intern with the <a href="https://www.rescue.org/"
-                  class="text-decoration-underline">International Rescue Committee (IRC)</a></h5>
-              <p class="card-text"><strong>IRC Supervisor:</strong> Mikaela Cochran, Advisor, Best Use of Resources</p>
-              <p class="card-text"><strong>CIDER Faculty Supervisors:</strong> <a
-                  href="https://barrett.dyson.cornell.edu/">Chris Barrett</a>, <a
-                  href="https://facultyprofiles.tufts.edu/jenny-aker">Jenny Aker</a></p>
-              <p class="card-text"><strong>Anticipated Duration:</strong> Fall term (August 26 – December 9, 2024)</p>
-              <p class="card-text"><strong>Application Materials:</strong> Send to <a
-                  href="mailto:CIDER@cornell.edu">CIDER@cornell.edu</a> (i) a resume, (ii) academic transcript(s), and
-                (iii) a statement of interest (not to exceed two pages)</p>
-              <p class="card-text"><strong>Deadline:</strong> June 10, 2024</p>
-              <button type="button" class="btn btn-primary" data-bs-toggle="modal"
-                data-bs-target="#opportunityModal">Read More</button>
+        </div>
+  
+        <div class="opportunity-card card mb-4 remote internship" data-bs-toggle="modal" data-bs-target="#remoteModal">
+          <div class="row g-0">
+            <div class="col-md-4 d-flex align-items-center justify-content-center">
+              <img src="https://via.placeholder.com/150" class="img-fluid rounded-start" alt="Opportunity Image">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title">Remote Research Assistant with XYZ Organization</h5>
+                <p class="card-text"><strong>Supervisor:</strong> John Doe, Research Director</p>
+                <p class="card-text"><strong>Duration:</strong> Summer term (June 1 – August 31, 2024)</p>
+                <p class="card-text"><strong>Application Materials:</strong> Send to <a
+                    href="mailto:XYZ@organization.org">XYZ@organization.org</a> (i) a resume, (ii) academic transcript(s),
+                  and (iii) a statement of interest (not to exceed two pages)</p>
+                <p class="card-text"><strong>Deadline:</strong> May 15, 2024</p>
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#remoteModal">Read
+                  More</button>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+        <div class="opportunity-card card mb-4 part-time" data-bs-toggle="modal" data-bs-target="#partTimeModal">
+          <div class="row g-0">
+            <div class="col-md-4 d-flex align-items-center justify-content-center">
+              <img src="https://via.placeholder.com/150" class="img-fluid rounded-start" alt="Opportunity Image">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title">Part-Time Assistant with ABC Organization</h5>
+                <p class="card-text"><strong>Supervisor:</strong> Jane Smith, Assistant Director</p>
+                <p class="card-text"><strong>Duration:</strong> Spring term (March 1 – May 31, 2024)</p>
+                <p class="card-text"><strong>Application Materials:</strong> Send to <a
+                    href="mailto:ABC@organization.org">ABC@organization.org</a> (i) a resume, (ii) academic transcript(s),
+                  and (iii) a statement of interest (not to exceed two pages)</p>
+                <p class="card-text"><strong>Deadline:</strong> February 20, 2024</p>
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#partTimeModal">Read
+                  More</button>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+        <div class="opportunity-card card mb-4 full-time" data-bs-toggle="modal" data-bs-target="#fullTimeModal">
+          <div class="row g-0">
+            <div class="col-md-4 d-flex align-items-center justify-content-center">
+              <img src="https://via.placeholder.com/150" class="img-fluid rounded-start" alt="Opportunity Image">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title">Full-Time Analyst with DEF Corporation</h5>
+                <p class="card-text"><strong>Supervisor:</strong> Robert Brown, Lead Analyst</p>
+                <p class="card-text"><strong>Duration:</strong> Permanent</p>
+                <p class="card-text"><strong>Application Materials:</strong> Send to <a
+                    href="mailto:DEF@corporation.org">DEF@corporation.org</a> (i) a resume, (ii) academic transcript(s),
+                  and (iii) a statement of interest (not to exceed two pages)</p>
+                <p class="card-text"><strong>Deadline:</strong> March 1, 2024</p>
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#fullTimeModal">Read
+                  More</button>
+              </div>
             </div>
           </div>
         </div>
       </div>
-
-      <div class="opportunity-card card mb-4 remote" data-bs-toggle="modal" data-bs-target="#remoteModal">
-        <div class="row g-0">
-          <div class="col-md-4 d-flex align-items-center justify-content-center">
-            <img src="https://via.placeholder.com/150" class="img-fluid rounded-start" alt="Opportunity Image">
+    </div>
+  
+    <!-- Modal -->
+    <div class="modal fade" id="opportunityModal" tabindex="-1" aria-labelledby="opportunityModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="opportunityModalLabel">Costing Analysis Evidence Mapping Intern</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
-          <div class="col-md-8">
-            <div class="card-body">
-              <h5 class="card-title">Remote Research Assistant with XYZ Organization</h5>
-              <p class="card-text"><strong>Supervisor:</strong> John Doe, Research Director</p>
-              <p class="card-text"><strong>Duration:</strong> Summer term (June 1 – August 31, 2024)</p>
-              <p class="card-text"><strong>Application Materials:</strong> Send to <a
-                  href="mailto:XYZ@organization.org">XYZ@organization.org</a> (i) a resume, (ii) academic transcript(s),
-                and (iii) a statement of interest (not to exceed two pages)</p>
-              <p class="card-text"><strong>Deadline:</strong> May 15, 2024</p>
-              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#remoteModal">Read
-                More</button>
-            </div>
+          <div class="modal-body">
+            <p><strong>IRC Supervisor:</strong> Mikaela Cochran, Advisor, Best Use of Resources</p>
+            <p><strong>CIDER Faculty Supervisors:</strong> <a href="https://barrett.dyson.cornell.edu/">Chris Barrett</a>,
+              <a href="https://facultyprofiles.tufts.edu/jenny-aker">Jenny Aker</a>
+            </p>
+            <p><strong>Anticipated Duration:</strong> Fall term (August 26 – December 9, 2024)</p>
+            <p><strong>Application Materials:</strong> Send to <a href="mailto:CIDER@cornell.edu">CIDER@cornell.edu</a>
+              (i) a resume, (ii) academic transcript(s), and (iii) a statement of interest (not to exceed two pages)</p>
+            <p><strong>Deadline:</strong> June 10, 2024</p>
+  
+            <h5>Team:</h5>
+            <p><a href="https://airbel.rescue.org/">IRC’s Airbel Impact Lab</a> designs, tests, and scales life-changing,
+              cost-effective solutions for people affected by conflict and disaster. By applying the IRC’s deep technical
+              expertise and field experience with a range of skills from the behavioral sciences, human-centered design,
+              research, and multi-disciplinary problem-solving in humanitarian contexts, we work to develop breakthrough
+              solutions that combine creativity and rigor, openness and expertise, and a desire to think afresh with the
+              experience of a large-scale implementing organization. Within Airbel, the Best Use of Resources team
+              provides analysis and decision-making support to improve the cost-efficiency and cost-effectiveness of IRC
+              programs.</p>
+  
+            <h5>Role:</h5>
+            <p>The IRC has led the way in producing <a href="https://www.rescue.org/cost-analysis">cost evidence</a> in
+              the humanitarian sector using a standardized methodology to assess the cost-efficiency and
+              cost-effectiveness of humanitarian and development programs. Growing interest in cost evidence is increasing
+              demand for these analyses throughout the humanitarian response sector. However, this data is most
+              informative when we have a pool of comparable data points, allowing us to understand which interventions are
+              more cost-efficient and cost-effective than others.</p>
+            <p>The Costing Analysis Evidence Mapping Intern will produce evidence gap maps compiling this pool of data on
+              existing cost data. Examples of evidence gap maps can be found on websites for <a
+                href="https://www.3ieimpact.org/evidence-hub/evidence-gap-maps">3ie</a> and <a
+                href="https://www.campbellcollaboration.org/evidence-gap-maps.html">Campbell</a>. Up to three interns will
+              be selected for this internship. They will each be assigned to produce an evidence gap map around one of the
+              following thematic areas as it relates to costs, costing, cost-efficiency, and cost-effectiveness
+              humanitarian contexts:</p>
+            <ul>
+              <li>Seed security</li>
+              <li>Nutrition</li>
+              <li>Maternal and newborn health</li>
+            </ul>
+            <p>If any intern reaches the limit of pre-existing data in the sector, they will be asked to move onto
+              beginning a new evidence gap map for one of the following secondary thematic areas: economic livelihoods,
+              protection, or education, in humanitarian contexts. Interns will be expected to collaborate on ensuring that
+              their literature review approaches are consistent and systematic, and produced in a similar deliverable
+              format of an excel file with pre-determined categories by the IRC oversight, along with a 3-5 page write-up
+              of the main findings.</p>
+            <p>The interns will be working alongside and meet weekly with a Best Use of Resources Advisor, who will
+              provide guidance on the deliverable work. The interns will also receive an orientation for the IRC’s
+              Evidence 2 Action (E2A) team on methodology, standards, and expectation setting for producing evidence gap
+              maps. The E2A team supports the IRC in the gathering and use of evidence to make programmatic and strategic
+              decisions. We identify, gather, and assess the best available research evidence, and clarify knowns and
+              unknowns. This work informs IRC research and programming investments, improving program quality, guiding
+              implementation decisions, and informing policy priorities. This internship will provide a unique opportunity
+              to gain valuable exposure to the humanitarian and international development sector, by one of the leading
+              cost analysis NGOs.</p>
+  
+            <h5>Remuneration:</h5>
+            <p>Each intern will be provided a one-time stipend of $1,600 at the beginning of the semester, in compensation
+              for at least 60 hours of time.</p>
+  
+            <h5>Deliverables:</h5>
+            <ul>
+              <li>Evidence gap map excel file for each thematic area.</li>
+              <li>3-5 page write-up of key findings for each thematic area. This write-up will be posted to our <a
+                  href="https://www.rescue.org/cost-analysis">IRC costing website</a> for wider access by the humanitarian
+                response costing community.</li>
+            </ul>
+            <p>No travel will be involved for this position. All engagement will take place remotely via weekly Microsoft
+              Teams calls and email.</p>
+  
+            <h5>Desired Skills:</h5>
+            <ul>
+              <li>Knowledge of thematic area covered in evidence mapping.</li>
+              <li>Previous experience conducting literature reviews and secondary research.</li>
+              <li>Strong communication skills and ability to synthesize technical information into straightforward and
+                clear language for non-technical audiences.</li>
+              <li>Attentiveness to detail.</li>
+              <li>Interest in humanitarian aid and international development.</li>
+              <li>Language proficiency skills in English required. Preferred language proficiency in French.</li>
+              <li>Graduate students preferred. Undergraduate juniors and seniors will be considered.</li>
+            </ul>
           </div>
         </div>
       </div>
     </div>
-  </div>
-
-  <!-- Modal -->
-  <div class="modal fade" id="opportunityModal" tabindex="-1" aria-labelledby="opportunityModalLabel"
-    aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="opportunityModalLabel">Costing Analysis Evidence Mapping Intern</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <p><strong>IRC Supervisor:</strong> Mikaela Cochran, Advisor, Best Use of Resources</p>
-          <p><strong>CIDER Faculty Supervisors:</strong> <a href="https://barrett.dyson.cornell.edu/">Chris Barrett</a>,
-            <a href="https://facultyprofiles.tufts.edu/jenny-aker">Jenny Aker</a>
-          </p>
-          <p><strong>Anticipated Duration:</strong> Fall term (August 26 – December 9, 2024)</p>
-          <p><strong>Application Materials:</strong> Send to <a href="mailto:CIDER@cornell.edu">CIDER@cornell.edu</a>
-            (i) a resume, (ii) academic transcript(s), and (iii) a statement of interest (not to exceed two pages)</p>
-          <p><strong>Deadline:</strong> June 10, 2024</p>
-
-          <h5>Team:</h5>
-          <p><a href="https://airbel.rescue.org/">IRC’s Airbel Impact Lab</a> designs, tests, and scales life-changing,
-            cost-effective solutions for people affected by conflict and disaster. By applying the IRC’s deep technical
-            expertise and field experience with a range of skills from the behavioral sciences, human-centered design,
-            research, and multi-disciplinary problem-solving in humanitarian contexts, we work to develop breakthrough
-            solutions that combine creativity and rigor, openness and expertise, and a desire to think afresh with the
-            experience of a large-scale implementing organization. Within Airbel, the Best Use of Resources team
-            provides analysis and decision-making support to improve the cost-efficiency and cost-effectiveness of IRC
-            programs.</p>
-
-          <h5>Role:</h5>
-          <p>The IRC has led the way in producing <a href="https://www.rescue.org/cost-analysis">cost evidence</a> in
-            the humanitarian sector using a standardized methodology to assess the cost-efficiency and
-            cost-effectiveness of humanitarian and development programs. Growing interest in cost evidence is increasing
-            demand for these analyses throughout the humanitarian response sector. However, this data is most
-            informative when we have a pool of comparable data points, allowing us to understand which interventions are
-            more cost-efficient and cost-effective than others.</p>
-          <p>The Costing Analysis Evidence Mapping Intern will produce evidence gap maps compiling this pool of data on
-            existing cost data. Examples of evidence gap maps can be found on websites for <a
-              href="https://www.3ieimpact.org/evidence-hub/evidence-gap-maps">3ie</a> and <a
-              href="https://www.campbellcollaboration.org/evidence-gap-maps.html">Campbell</a>. Up to three interns will
-            be selected for this internship. They will each be assigned to produce an evidence gap map around one of the
-            following thematic areas as it relates to costs, costing, cost-efficiency, and cost-effectiveness
-            humanitarian contexts:</p>
-          <ul>
-            <li>Seed security</li>
-            <li>Nutrition</li>
-            <li>Maternal and newborn health</li>
-          </ul>
-          <p>If any intern reaches the limit of pre-existing data in the sector, they will be asked to move onto
-            beginning a new evidence gap map for one of the following secondary thematic areas: economic livelihoods,
-            protection, or education, in humanitarian contexts. Interns will be expected to collaborate on ensuring that
-            their literature review approaches are consistent and systematic, and produced in a similar deliverable
-            format of an excel file with pre-determined categories by the IRC oversight, along with a 3-5 page write-up
-            of the main findings.</p>
-          <p>The interns will be working alongside and meet weekly with a Best Use of Resources Advisor, who will
-            provide guidance on the deliverable work. The interns will also receive an orientation for the IRC’s
-            Evidence 2 Action (E2A) team on methodology, standards, and expectation setting for producing evidence gap
-            maps. The E2A team supports the IRC in the gathering and use of evidence to make programmatic and strategic
-            decisions. We identify, gather, and assess the best available research evidence, and clarify knowns and
-            unknowns. This work informs IRC research and programming investments, improving program quality, guiding
-            implementation decisions, and informing policy priorities. This internship will provide a unique opportunity
-            to gain valuable exposure to the humanitarian and international development sector, by one of the leading
-            cost analysis NGOs.</p>
-
-          <h5>Remuneration:</h5>
-          <p>Each intern will be provided a one-time stipend of $1,600 at the beginning of the semester, in compensation
-            for at least 60 hours of time.</p>
-
-          <h5>Deliverables:</h5>
-          <ul>
-            <li>Evidence gap map excel file for each thematic area.</li>
-            <li>3-5 page write-up of key findings for each thematic area. This write-up will be posted to our <a
-                href="https://www.rescue.org/cost-analysis">IRC costing website</a> for wider access by the humanitarian
-              response costing community.</li>
-          </ul>
-          <p>No travel will be involved for this position. All engagement will take place remotely via weekly Microsoft
-            Teams calls and email.</p>
-
-          <h5>Desired Skills:</h5>
-          <ul>
-            <li>Knowledge of thematic area covered in evidence mapping.</li>
-            <li>Previous experience conducting literature reviews and secondary research.</li>
-            <li>Strong communication skills and ability to synthesize technical information into straightforward and
-              clear language for non-technical audiences.</li>
-            <li>Attentiveness to detail.</li>
-            <li>Interest in humanitarian aid and international development.</li>
-            <li>Language proficiency skills in English required. Preferred language proficiency in French.</li>
-            <li>Graduate students preferred. Undergraduate juniors and seniors will be considered.</li>
-          </ul>
+  
+    <!-- Modal for Remote Research Assistant -->
+    <div class="modal fade" id="remoteModal" tabindex="-1" aria-labelledby="remoteModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="remoteModalLabel">Remote Research Assistant with XYZ Organization</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p><strong>Supervisor:</strong> John Doe, Research Director</p>
+            <p><strong>Duration:</strong> Summer term (June 1 – August 31, 2024)</p>
+            <p><strong>Application Materials:</strong> Send to <a
+                href="mailto:XYZ@organization.org">XYZ@organization.org</a> (i) a resume, (ii) academic transcript(s), and
+              (iii) a statement of interest (not to exceed two pages)</p>
+            <p><strong>Deadline:</strong> May 15, 2024</p>
+            <!-- Add more detailed content here for the remote position -->
+          </div>
         </div>
       </div>
     </div>
-  </div>
-
-  <!-- Modal for Remote Research Assistant -->
-  <div class="modal fade" id="remoteModal" tabindex="-1" aria-labelledby="remoteModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="remoteModalLabel">Remote Research Assistant with XYZ Organization</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <p><strong>Supervisor:</strong> John Doe, Research Director</p>
-          <p><strong>Duration:</strong> Summer term (June 1 – August 31, 2024)</p>
-          <p><strong>Application Materials:</strong> Send to <a href="mailto:XYZ@organization.org">XYZ@organization.org</a> (i) a resume, (ii) academic transcript(s), and
-            (iii) a statement of interest (not to exceed two pages)</p>
-          <p><strong>Deadline:</strong> May 15, 2024</p>
-          <!-- Add more detailed content here for the remote position -->
+  
+    <!-- Modal for Part-Time Assistant -->
+    <div class="modal fade" id="partTimeModal" tabindex="-1" aria-labelledby="partTimeModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="partTimeModalLabel">Part-Time Assistant with ABC Organization</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p><strong>Supervisor:</strong> Jane Smith, Assistant Director</p>
+            <p><strong>Duration:</strong> Spring term (March 1 – May 31, 2024)</p>
+            <p><strong>Application Materials:</strong> Send to <a href="mailto:ABC@organization.org">ABC@organization.org</a> (i) a resume, (ii) academic transcript(s), and
+              (iii) a statement of interest (not to exceed two pages)</p>
+            <p><strong>Deadline:</strong> February 20, 2024</p>
+            <!-- Add more detailed content here for the part-time position -->
+          </div>
         </div>
       </div>
     </div>
-  </div>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-    crossorigin="anonymous"></script>
-  <script>
-    document.querySelectorAll('input[name="filter"]').forEach(input => {
-      input.addEventListener('change', function () {
-        const filterValue = this.value;
+  
+    <!-- Modal for Full-Time Analyst -->
+    <div class="modal fade" id="fullTimeModal" tabindex="-1" aria-labelledby="fullTimeModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="fullTimeModalLabel">Full-Time Analyst with DEF Corporation</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p><strong>Supervisor:</strong> Robert Brown, Lead Analyst</p>
+            <p><strong>Duration:</strong> Permanent</p>
+            <p><strong>Application Materials:</strong> Send to <a href="mailto:DEF@corporation.org">DEF@corporation.org</a> (i) a resume, (ii) academic transcript(s), and
+              (iii) a statement of interest (not to exceed two pages)</p>
+            <p><strong>Deadline:</strong> March 1, 2024</p>
+            <!-- Add more detailed content here for the full-time position -->
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"></script>
+    <script>
+      document.querySelectorAll('input[name="filter"]').forEach(input => {
+        input.addEventListener('change', function () {
+          const filterValue = this.value;
+          const cards = document.querySelectorAll('.opportunity-card');
+          let hasResults = false;
+  
+          cards.forEach(card => {
+            if (filterValue === 'all') {
+              card.style.display = 'block';
+              hasResults = true;
+            } else if (card.classList.contains(filterValue)) {
+              card.style.display = 'block';
+              hasResults = true;
+            } else {
+              card.style.display = 'none';
+            }
+          });
+  
+          if (!hasResults) {
+            const noResultsMessage = document.createElement('div');
+            noResultsMessage.className = 'no-results';
+            noResultsMessage.innerHTML = '<p>No opportunities found for the selected filter.</p>';
+            document.querySelector('.container').appendChild(noResultsMessage);
+          } else {
+            const noResultsElement = document.querySelector('.no-results');
+            if (noResultsElement) {
+              noResultsElement.remove();
+            }
+          }
+        });
+      });
+  
+      document.getElementById('searchButton').addEventListener('click', function () {
+        performSearch();
+      });
+  
+      document.getElementById('searchInput').addEventListener('keypress', function (event) {
+        if (event.key === 'Enter') {
+          event.preventDefault();
+          performSearch();
+        }
+      });
+  
+      function performSearch() {
+        const searchValue = document.getElementById('searchInput').value.toLowerCase();
         const cards = document.querySelectorAll('.opportunity-card');
         let hasResults = false;
-
+  
         cards.forEach(card => {
-          if (filterValue === 'all') {
-            card.style.display = 'block';
-            hasResults = true;
-          } else if (card.classList.contains(filterValue)) {
+          const cardText = card.textContent.toLowerCase();
+          if (cardText.includes(searchValue)) {
             card.style.display = 'block';
             hasResults = true;
           } else {
             card.style.display = 'none';
           }
         });
-
+  
         if (!hasResults) {
           const noResultsMessage = document.createElement('div');
           noResultsMessage.className = 'no-results';
-          noResultsMessage.innerHTML = '<p>No opportunities found for the selected filter.</p>';
+          noResultsMessage.innerHTML = '<p>No opportunities found for the search term.</p>';
           document.querySelector('.container').appendChild(noResultsMessage);
         } else {
           const noResultsElement = document.querySelector('.no-results');
@@ -266,48 +402,12 @@
             noResultsElement.remove();
           }
         }
-      });
-    });
-
-    document.getElementById('searchButton').addEventListener('click', function () {
-      performSearch();
-    });
-
-    document.getElementById('searchInput').addEventListener('keypress', function (event) {
-      if (event.key === 'Enter') {
-        event.preventDefault();
-        performSearch();
       }
-    });
+    </script>
 
-    function performSearch() {
-      const searchValue = document.getElementById('searchInput').value.toLowerCase();
-      const cards = document.querySelectorAll('.opportunity-card');
-      let hasResults = false;
+  </main>
 
-      cards.forEach(card => {
-        const cardText = card.textContent.toLowerCase();
-        if (cardText.includes(searchValue)) {
-          card.style.display = 'block';
-          hasResults = true;
-        } else {
-          card.style.display = 'none';
-        }
-      });
 
-      if (!hasResults) {
-        const noResultsMessage = document.createElement('div');
-        noResultsMessage.className = 'no-results';
-        noResultsMessage.innerHTML = '<p>No opportunities found for the search term.</p>';
-        document.querySelector('.container').appendChild(noResultsMessage);
-      } else {
-        const noResultsElement = document.querySelector('.no-results');
-        if (noResultsElement) {
-          noResultsElement.remove();
-        }
-      }
-    }
-  </script>
   <footer class="site-footer">
     <div class="footer-logo-container">
       <img class="site-footer__logo-graphic" alt="Logo for Cornell SC Johnson College of Business"
