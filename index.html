@@ -9,6 +9,9 @@
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 </head>
 
 <body>
@@ -81,21 +84,25 @@
               <input class="form-check-input" type="radio" name="filter" id="filterFullTime" value="full-time">
               <label class="form-check-label" for="filterFullTime">Full-Time</label>
             </div>
-
           </div>
-
         </div>
 
-    
         <div class="search-group">
           <input type="text" id="searchInput" class="form-control" placeholder="Search Opportunities">
           <button id="searchButton" class="btn btn-primary">Search</button>
         </div>
+
+        <div class="sort-group mt-3">
+          <label for="sortSelect">Sort by:</label>
+          <select id="sortSelect" class="form-select">
+            <option value="dateAsc">Date (Asc)</option>
+            <option value="dateDesc">Date (Desc)</option>
+          </select>
+        </div>
       </div>
 
       <div class="container mt-5">
-        <div class="opportunity-card card mb-4 on-site internship" data-bs-toggle="modal"
-          data-bs-target="#opportunityModal">
+        <div class="opportunity-card card mb-4 on-site internship" data-date="2024-06-10">
           <div class="row g-0">
             <div class="col-md-4 d-flex align-items-center justify-content-center">
               <img src="images/irc.jpeg" class="img-fluid rounded-start" alt="Opportunity Image">
@@ -122,7 +129,7 @@
           </div>
         </div>
 
-        <div class="opportunity-card card mb-4 remote internship" data-bs-toggle="modal" data-bs-target="#remoteModal">
+        <div class="opportunity-card card mb-4 remote internship" data-date="2024-05-15">
           <div class="row g-0">
             <div class="col-md-4 d-flex align-items-center justify-content-center">
               <img src="https://via.placeholder.com/150" class="img-fluid rounded-start" alt="Opportunity Image">
@@ -144,7 +151,7 @@
           </div>
         </div>
 
-        <div class="opportunity-card card mb-4 part-time" data-bs-toggle="modal" data-bs-target="#partTimeModal">
+        <div class="opportunity-card card mb-4 part-time" data-date="2024-02-20">
           <div class="row g-0">
             <div class="col-md-4 d-flex align-items-center justify-content-center">
               <img src="https://via.placeholder.com/150" class="img-fluid rounded-start" alt="Opportunity Image">
@@ -167,7 +174,7 @@
           </div>
         </div>
 
-        <div class="opportunity-card card mb-4 full-time" data-bs-toggle="modal" data-bs-target="#fullTimeModal">
+        <div class="opportunity-card card mb-4 full-time" data-date="2024-03-01">
           <div class="row g-0">
             <div class="col-md-4 d-flex align-items-center justify-content-center">
               <img src="https://via.placeholder.com/150" class="img-fluid rounded-start" alt="Opportunity Image">
@@ -362,111 +369,247 @@
       </div>
     </div>
 
-<!-- Toast Containers -->
-<div class="toast-container">
-  <div id="searchToast" class="toast align-items-center" role="alert" aria-live="assertive" aria-atomic="true" data-bs-delay="3000">
-    <div class="d-flex">
-      <div id="toastMessage" class="toast-body"></div>
-      <button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+    <!-- Toast Containers -->
+    <div class="toast-container">
+      <div id="searchToast" class="toast align-items-center" role="alert" aria-live="assertive" aria-atomic="true" data-bs-delay="3000">
+        <div class="d-flex">
+          <div id="toastMessage" class="toast-body"></div>
+          <button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+      </div>
     </div>
-  </div>
-</div>
-
-
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
       crossorigin="anonymous"></script>
     <script>
-      document.querySelectorAll('input[name="filter"]').forEach(input => {
-        input.addEventListener('change', function () {
-          const filterValue = this.value;
-          const cards = document.querySelectorAll('.opportunity-card');
+      $(function() {
+        var availableTags = [
+          "Internship",
+          "Part-Time",
+          "Full-Time",
+          "Remote",
+          "On-Site",
+          "Hybrid",
+          "Accounting",
+          "Administration",
+          "Agriculture",
+          "Analytics",
+          "Art",
+          "Biotechnology",
+          "Business Development",
+          "Communications",
+          "Construction",
+          "Consulting",
+          "Customer Service",
+          "Data Science",
+          "Design",
+          "Education",
+          "Engineering",
+          "Entertainment",
+          "Environmental Science",
+          "Event Planning",
+          "Finance",
+          "Food Service",
+          "Government",
+          "Healthcare",
+          "Hospitality",
+          "Human Resources",
+          "Information Technology",
+          "Journalism",
+          "Law",
+          "Legal",
+          "Logistics",
+          "Management",
+          "Manufacturing",
+          "Marketing",
+          "Media",
+          "Medical",
+          "Non-Profit",
+          "Nursing",
+          "Operations",
+          "Pharmaceutical",
+          "Photography",
+          "Product Management",
+          "Project Management",
+          "Public Relations",
+          "Quality Assurance",
+          "Real Estate",
+          "Research",
+          "Retail",
+          "Sales",
+          "Science",
+          "Social Media",
+          "Software Development",
+          "Sports",
+          "Strategy",
+          "Supply Chain",
+          "Sustainability",
+          "Teaching",
+          "Telecommunications",
+          "Transportation",
+          "Travel",
+          "Veterinary",
+          "Video Production",
+          "Web Development",
+          "Writing",
+          "Graphic Design",
+          "Interior Design",
+          "UX/UI Design",
+          "Machine Learning",
+          "Artificial Intelligence",
+          "Blockchain",
+          "Cloud Computing",
+          "Cybersecurity",
+          "Data Analysis",
+          "DevOps",
+          "E-commerce",
+          "Electronics",
+          "Energy",
+          "FinTech",
+          "Gaming",
+          "Geology",
+          "Humanities",
+          "Insurance",
+          "IoT",
+          "Language Services",
+          "Library Science",
+          "Logistics and Supply Chain",
+          "Marine Biology",
+          "Mathematics",
+          "Mechanical Engineering",
+          "Mental Health",
+          "Microbiology",
+          "Nanotechnology",
+          "Neuroscience",
+          "Nutrition",
+          "Oceanography",
+          "Oil and Gas",
+          "Paralegal",
+          "Petroleum Engineering",
+          "Philosophy",
+          "Physics",
+          "Physiotherapy",
+          "Political Science",
+          "Public Health",
+          "Quantum Computing",
+          "Robotics",
+          "Sociology",
+          "Statistics",
+          "Textile Design",
+          "Urban Planning",
+          "Veterinary Medicine",
+          "Zoology"
+        ];
+
+        $("#searchInput").autocomplete({
+          source: availableTags
+        });
+
+        function performSearch() {
+          const searchValue = $('#searchInput').val().toLowerCase();
+          const cards = $('.opportunity-card');
           let hasResults = false;
 
-          cards.forEach(card => {
-            if (filterValue === 'all') {
-              card.style.display = 'block';
-              hasResults = true;
-            } else if (card.classList.contains(filterValue)) {
-              card.style.display = 'block';
+          cards.each(function() {
+            const cardText = $(this).text().toLowerCase();
+            if (cardText.includes(searchValue)) {
+              $(this).show();
               hasResults = true;
             } else {
-              card.style.display = 'none';
+              $(this).hide();
             }
           });
 
-          const noResultsElement = document.querySelector('.no-results');
+          const noResultsElement = $('.no-results');
           if (!hasResults) {
-            if (!noResultsElement) {
-              const noResultsMessage = document.createElement('div');
-              noResultsMessage.className = 'no-results';
-              noResultsMessage.innerHTML = '<p>No opportunities found for the selected filter.</p>';
-              document.querySelector('.container').appendChild(noResultsMessage);
+            if (noResultsElement.length === 0) {
+              const noResultsMessage = $('<div class="no-results"><p>No opportunities found for the search term.</p></div>');
+              $('.container').append(noResultsMessage);
             }
-          } else if (noResultsElement) {
+          } else {
             noResultsElement.remove();
           }
 
-          showToast(hasResults ? `${document.querySelectorAll('.opportunity-card:not([style*="display: none"])').length} items found.` : '0 items found.', hasResults);
-        });
-      });
+          showToast(hasResults ? `${$('.opportunity-card:visible').length} items found.` : '0 items found.', hasResults);
+        }
 
-      document.getElementById('searchButton').addEventListener('click', function () {
-        performSearch();
-      });
+        function showToast(message, success) {
+          const toastElement = new bootstrap.Toast($('#searchToast'));
+          const toastMessage = $('#toastMessage');
+          toastMessage.text(message);
+          toastMessage.css({
+            'background-color': success ? '#d4edda' : '#f8d7da',
+            'color': success ? '#155724' : '#721c24'
+          });
+          toastElement.show();
+        }
 
-      document.getElementById('searchInput').addEventListener('keypress', function (event) {
-        if (event.key === 'Enter') {
-          event.preventDefault();
+        $('#searchButton').on('click', function() {
           performSearch();
-        }
-      });
+        });
 
-      function performSearch() {
-        const searchValue = document.getElementById('searchInput').value.toLowerCase();
-        const cards = document.querySelectorAll('.opportunity-card');
-        let hasResults = false;
-
-        cards.forEach(card => {
-          const cardText = card.textContent.toLowerCase();
-          if (cardText.includes(searchValue)) {
-            card.style.display = 'block';
-            hasResults = true;
-          } else {
-            card.style.display = 'none';
+        $('#searchInput').on('keypress', function(event) {
+          if (event.key === 'Enter') {
+            event.preventDefault();
+            performSearch();
           }
         });
 
-        const noResultsElement = document.querySelector('.no-results');
-        if (!hasResults) {
-          if (!noResultsElement) {
-            const noResultsMessage = document.createElement('div');
-            noResultsMessage.className = 'no-results';
-            noResultsMessage.innerHTML = '<p>No opportunities found for the search term.</p>';
-            document.querySelector('.container').appendChild(noResultsMessage);
+        $('input[name="filter"]').on('change', function() {
+          const filterValue = $(this).val();
+          const cards = $('.opportunity-card');
+          let hasResults = false;
+
+          cards.each(function() {
+            const card = $(this);
+            if (filterValue === 'all' || card.hasClass(filterValue)) {
+              card.show();
+              hasResults = true;
+            } else {
+              card.hide();
+            }
+          });
+
+          const noResultsElement = $('.no-results');
+          if (!hasResults) {
+            if (noResultsElement.length === 0) {
+              const noResultsMessage = $('<div class="no-results"><p>No opportunities found for the selected filter.</p></div>');
+              $('.container').append(noResultsMessage);
+            }
+          } else {
+            noResultsElement.remove();
           }
-        } else if (noResultsElement) {
-          noResultsElement.remove();
+
+          showToast(hasResults ? `${$('.opportunity-card:visible').length} items found.` : '0 items found.', hasResults);
+        });
+
+        $('#sortSelect').on('change', function() {
+          sortCards();
+        });
+
+        function sortCards() {
+          const sortValue = $('#sortSelect').val();
+          const container = $('.container');
+          const cards = $('.opportunity-card').get();
+
+          cards.sort((a, b) => {
+            const dateA = new Date($(a).data('date'));
+            const dateB = new Date($(b).data('date'));
+            if (sortValue === 'dateAsc') {
+              return dateA - dateB;
+            } else {
+              return dateB - dateA;
+            }
+          });
+
+          $.each(cards, (i, card) => {
+            container.append(card);
+          });
         }
-
-        showToast(hasResults ? `${document.querySelectorAll('.opportunity-card:not([style*="display: none"])').length} items found.` : '0 items found.', hasResults);
-      }
-
-      function showToast(message, success) {
-        const toastElement = new bootstrap.Toast(document.getElementById('searchToast'));
-        const toastMessage = document.getElementById('toastMessage');
-        toastMessage.textContent = message;
-        toastMessage.style.backgroundColor = success ? '#d4edda' : '#f8d7da';
-        toastMessage.style.color = success ? '#155724' : '#721c24';
-        toastElement.show();
-      }
-
-
+      });
     </script>
-
   </main>
-
 
   <footer class="site-footer">
     <div class="footer-logo-container">

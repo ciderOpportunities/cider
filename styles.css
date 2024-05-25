@@ -79,14 +79,15 @@ body {
     font-weight: 700;
     color: #b31b1b;
 }
-.search-group{
-    max-width: 530px;
+
+.sort-group, .search-group {
+    max-width: 260px!important;
 }
 
 .container {
-    margin-left: 20%!important; /* Adjusted to match increased sidebar width */
+    margin-left: 21%!important; /* Adjusted to match increased sidebar width */
     margin-top: 0 !important;
-    width: calc(100% - 280px); /* Adjusted to match increased sidebar width */
+    width: calc(100% - 21%);
     max-width: 1200px; /* Set maximum width */
     min-height: calc(100vh - 70px); /* Adjusted to keep footer at bottom */
     display: flex;
@@ -259,6 +260,10 @@ footer a {
 }
 
 @media (max-width: 992px) {
+    main {
+        margin: 0 auto;
+        padding: 0 5%;
+    }
     .sidebar {
         width: 100%;
         height: auto;
@@ -267,7 +272,6 @@ footer a {
         border-right: none;
         box-shadow: none;
     }
-    
     .filters-container {
         display: flex;
         flex-direction: row;
@@ -279,7 +283,7 @@ footer a {
     }
 
     .container {
-        margin-left: 0!important;
+        margin-left: 0 !important;
         width: 100%;
         align-items: center; /* Center the individual cards */
     }
