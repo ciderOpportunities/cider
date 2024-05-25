@@ -334,75 +334,76 @@
       crossorigin="anonymous"></script>
     <script>
       document.querySelectorAll('input[name="filter"]').forEach(input => {
-        input.addEventListener('change', function () {
-          const filterValue = this.value;
-          const cards = document.querySelectorAll('.opportunity-card');
-          let hasResults = false;
-  
-          cards.forEach(card => {
-            if (filterValue === 'all') {
-              card.style.display = 'block';
-              hasResults = true;
-            } else if (card.classList.contains(filterValue)) {
-              card.style.display = 'block';
-              hasResults = true;
-            } else {
-              card.style.display = 'none';
-            }
-          });
-  
-          if (!hasResults) {
-            const noResultsMessage = document.createElement('div');
-            noResultsMessage.className = 'no-results';
-            noResultsMessage.innerHTML = '<p>No opportunities found for the selected filter.</p>';
-            document.querySelector('.container').appendChild(noResultsMessage);
-          } else {
-            const noResultsElement = document.querySelector('.no-results');
-            if (noResultsElement) {
-              noResultsElement.remove();
-            }
-          }
-        });
-      });
-  
-      document.getElementById('searchButton').addEventListener('click', function () {
-        performSearch();
-      });
-  
-      document.getElementById('searchInput').addEventListener('keypress', function (event) {
-        if (event.key === 'Enter') {
-          event.preventDefault();
-          performSearch();
-        }
-      });
-  
-      function performSearch() {
-        const searchValue = document.getElementById('searchInput').value.toLowerCase();
+    input.addEventListener('change', function () {
+        const filterValue = this.value;
         const cards = document.querySelectorAll('.opportunity-card');
         let hasResults = false;
-  
+
         cards.forEach(card => {
-          const cardText = card.textContent.toLowerCase();
-          if (cardText.includes(searchValue)) {
+            if (filterValue === 'all') {
+                card.style.display = 'block';
+                hasResults = true;
+            } else if (card.classList.contains(filterValue)) {
+                card.style.display = 'block';
+                hasResults = true;
+            } else {
+                card.style.display = 'none';
+            }
+        });
+
+        const noResultsElement = document.querySelector('.no-results');
+        if (!hasResults) {
+            if (!noResultsElement) {
+                const noResultsMessage = document.createElement('div');
+                noResultsMessage.className = 'no-results';
+                noResultsMessage.innerHTML = '<p>No opportunities found for the selected filter.</p>';
+                document.querySelector('.container').appendChild(noResultsMessage);
+            }
+        } else if (noResultsElement) {
+            noResultsElement.remove();
+        }
+    });
+});
+
+document.getElementById('searchButton').addEventListener('click', function () {
+    performSearch();
+});
+
+document.getElementById('searchInput').addEventListener('keypress', function (event) {
+    if (event.key === 'Enter') {
+        event.preventDefault();
+        performSearch();
+    }
+});
+
+function performSearch() {
+    const searchValue = document.getElementById('searchInput').value.toLowerCase();
+    const cards = document.querySelectorAll('.opportunity-card');
+    let hasResults = false;
+
+    cards.forEach(card => {
+        const cardText = card.textContent.toLowerCase();
+        if (cardText.includes(searchValue)) {
             card.style.display = 'block';
             hasResults = true;
-          } else {
-            card.style.display = 'none';
-          }
-        });
-  
-        if (!hasResults) {
-          const noResultsMessage = document.createElement('div');
-          noResultsMessage.className = 'no-results';
-          noResultsMessage.innerHTML = '<p>No opportunities found for the search term.</p>';
-          document.querySelector('.container').appendChild(noResultsMessage);
         } else {
-          const noResultsElement = document.querySelector('.no-results');
-          if (noResultsElement) {
-            noResultsElement.remove();
-          }
+            card.style.display = 'none';
         }
-      }
+    });
+
+    const noResultsElement = document.querySelector('.no-results');
+    if (!hasResults) {
+        if (!noResultsElement) {
+            const noResultsMessage = document.createElement('div');
+            noResultsMessage.className = 'no-results';
+            noResultsMessage.innerHTML = '<p>No opportunities found for the search term.</p>';
+            document.querySelector('.container').appendChild(noResultsMessage);
+        }
+    } else if (noResultsElement) {
+        noResultsElement.remove();
+    }
+}
+
     </script>
 
   </main>
