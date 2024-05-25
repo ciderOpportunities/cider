@@ -262,9 +262,12 @@ footer a {
     }
     .filters-container {
         display: flex;
-        justify-content: space-between;
+     flex-direction: row;
         width: 100%;
         margin-bottom: 20px;
+    }
+    .col1{
+        margin-right: 30%;
     }
 
     .container {
