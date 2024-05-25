@@ -381,7 +381,7 @@ body {
     z-index: 1000;
     width: 100%;
     padding: 0 20px;
-    height: 70px; /* Increased height */
+  
     display: flex;
     align-items: center;
 }
@@ -705,9 +705,12 @@ footer a {
     }
 }
 
-@media (min-width: 992px) {
+@media (min-width: 993px) {
     .container {
         max-width: none !important;
+    }
+    .navbar{
+        height: 70px;
     }
 }
 .navbar-toggler{
