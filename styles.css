@@ -53,9 +53,7 @@ body {
     font-weight: 700;
     color: #b31b1b;
 }
-.hamburger-container{
-    max-width: 250px!important;
-}
+
 
 .d-flex {
     display: flex;
