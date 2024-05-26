@@ -36,6 +36,9 @@ $(document).ready(function() {
         const jobCount = $('.job-post').length;
         $('#jobCount').text(jobCount);
     }
+    
 
  
 });
+
+  

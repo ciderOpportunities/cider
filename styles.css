@@ -517,7 +517,7 @@ body.dark-mode {
 .sidebar.dark-mode {
     background-color: #1c1c1c; /* Dark grey */
     color: #e0e0e0;
-    box-shadow: 2px 0 5px rgba(255, 255, 255, 0.1); /* Box shadow for distinction */
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1); /* Box shadow for distinction */
     border-right: 1px solid #333333; /* Border for distinction */
 }
 
