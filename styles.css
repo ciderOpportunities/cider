@@ -518,6 +518,9 @@ body.dark-mode {
         box-shadow: none;
         padding-top: 0 !important;
     }
+    .sidebar.dark-mode{
+        box-shadow: none;
+    }
 
     .flex {
         flex-direction: column;
