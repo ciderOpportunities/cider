@@ -6,6 +6,7 @@ body, html {
     padding: 0;
     height: 100%;
     font-family: 'Lato', sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for dark mode */
 }
 
 main {
@@ -20,6 +21,11 @@ body {
     padding-top: 70px; /* Prevent content from being hidden under the fixed navbar */
 }
 
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
 .navbar {
     background-color: #fff !important;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -27,6 +33,11 @@ body {
     width: 100%;
     padding: 0 20px;
     height: fit-content; /* Set height for larger screens */
+}
+
+.navbar.dark-mode {
+    background-color: #333333 !important;
+    color: #ffffff !important;
 }
 
 .nav {
@@ -46,6 +57,16 @@ body {
 .nav-link {
     color: black !important;
     padding: 0 15px;
+}
+
+.nav-link.dark-mode {
+    color: white !important;
+}
+.opportunity-card.dark-mode p {
+    color: #ffffff; /* Change the text color to white in dark mode */
+}
+.opportunity-card.dark-mode{
+    background-color: #b31b1b;
 }
 
 .header {
@@ -74,13 +95,16 @@ body {
     z-index: 100;
 }
 
+.sidebar.dark-mode {
+    background-color: #333333;
+    color: #ffffff;
+}
+
 .sidebar h4 {
     margin-top: 20px;
     font-weight: 700;
     color: #b31b1b;
 }
-
-
 
 .container {
     margin-left: 21% !important; /* Adjusted to match increased sidebar width */
@@ -95,6 +119,11 @@ body {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     margin-right: auto; /* Center container horizontally */
     margin-left: auto; /* Center container horizontally */
+}
+
+.container.dark-mode {
+    background-color: #222222;
+    color: #ffffff;
 }
 
 .search-group {
@@ -152,6 +181,12 @@ body {
     position: relative; /* Add relative positioning */
 }
 
+.opportunity-card.dark-mode {
+    background-color: #333333;
+    color: #ffffff;
+    border: 1px solid #555555;
+}
+
 .opportunity-card:hover {
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
     transform: translateY(-5px);
@@ -192,6 +227,11 @@ footer {
     flex-direction: column;
     font-weight: 300; /* Thin font for the entire footer */
     z-index: 1000;
+}
+
+footer.dark-mode {
+    background-color: #222222;
+    color: #ffffff;
 }
 
 .footer-logo-container {
@@ -416,19 +456,89 @@ footer a {
 
 .scroll-to-top {
     position: fixed;
-    bottom: 0px;
+    bottom: 20px;
     right: 20px;
     background-color: #b31b1b;
     color: #fff;
     padding: 10px 15px;
-    border-radius: 75%;
+    border-radius: 50%;
     cursor: pointer;
     display: none;
     z-index: 10000;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .scroll-to-top:hover {
     background-color: #a11a1a;
+    transform: scale(1.1);
+}
+/* Existing CSS */
+/* Existing CSS */
+
+/* Dark Mode styles */
+body.dark-mode {
+    background-color: #121212; /* Softer black */
+    color: #e0e0e0; /* Softer white */
 }
 
+.navbar.dark-mode {
+    background-color: #1c1c1c !important; /* Dark grey */
+    color: #e0e0e0 !important;
+    box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1); /* Box shadow for distinction */
+}
+
+.nav-link.dark-mode {
+    color: #e0e0e0 !important; /* Softer white for navigation links */
+}
+
+.sidebar.dark-mode {
+    background-color: #1c1c1c; /* Dark grey */
+    color: #e0e0e0;
+    box-shadow: 2px 0 5px rgba(255, 255, 255, 0.1); /* Box shadow for distinction */
+    border-right: 1px solid #333333; /* Border for distinction */
+}
+
+.container.dark-mode {
+    background-color: #1c1c1c; /* Dark grey */
+    color: #e0e0e0;
+    box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1); /* Box shadow for distinction */
+    border: 1px solid #333333; /* Border for distinction */
+}
+
+.opportunity-card.dark-mode {
+    background-color: #1c1c1c; /* Dark grey */
+    color: #e0e0e0;
+    border: 1px solid #333333; /* Border for distinction */
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1); /* Box shadow for distinction */
+}
+
+.opportunity-card.dark-mode p {
+    color: #d3d3d3; /* Softer white for paragraph text */
+}
+
+.opportunity-card.dark-mode .card-body h5 {
+    color: #4db6ac; /* Calming teal for the title */
+}
+
+footer.dark-mode {
+    background-color: #1c1c1c; /* Dark grey */
+    color: #e0e0e0;
+    box-shadow: 0 -2px 4px rgba(255, 255, 255, 0.1); /* Box shadow for distinction */
+    border-top: 1px solid #333333; /* Border for distinction */
+}
+
+.footer-logo-container.dark-mode {
+    background-color: #121212; /* Softer black */
+}
+
+.footer-section.dark-mode h3 {
+    color: #4db6ac; /* Calming teal for footer section titles */
+}
+
+.footer-section.dark-mode ul li a {
+    color: #e0e0e0; /* Softer white for footer links */
+}
+
+.footer-bottom.dark-mode p {
+    color: #e0e0e0;
+}

@@ -18,9 +18,7 @@
   <nav class="navbar navbar-expand-lg fixed-top">
     <div class="container-fluid">
       <a class="navbar-brand" href="https://business.cornell.edu/">
-        <img src="https://business.cornell.edu/wp-content/themes/core/img/theme/logos/college-logo.svg"
-          alt="Logo for Cornell SC Johnson College of Business"
-          class="site-header__logo-graphic site-header__logo-graphic--college">
+       <span class="nav-link">CIDER</span>
       </a>
       <div class="hamburger-container">
         <img
@@ -46,6 +44,10 @@
   <main>
     <div class="d-flex">
       <div class="sidebar">
+        <div class="form-check form-switch">
+          <input class="form-check-input" type="checkbox" id="darkModeToggle">
+          <label class="form-check-label" for="darkModeToggle">Dark Mode</label>
+        </div>
         <h4>Filter by:</h4>
         <div class="filters-container">
           <div class="col1">
@@ -130,7 +132,8 @@
                 <p class="card-text"><strong>Supervisor:</strong> John Doe, Research Director</p>
                 <p class="card-text"><strong>Duration:</strong> Summer term (June 1 – August 31, 2024)</p>
                 <p class="card-text"><strong>Application Materials:</strong> Send to <a
-                    href="mailto:XYZ@organization.org">XYZ@organization.org</a> (i) a resume, (ii) academic transcript(s),
+                    href="mailto:XYZ@organization.org">XYZ@organization.org</a> (i) a resume, (ii) academic
+                  transcript(s),
                   and (iii) a statement of interest (not to exceed two pages)</p>
                 <p class="card-text"><strong>Deadline:</strong> May 15, 2024</p>
                 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#remoteModal">Read
@@ -150,7 +153,8 @@
                 <p class="card-text"><strong>Supervisor:</strong> Jane Smith, Assistant Director</p>
                 <p class="card-text"><strong>Duration:</strong> Spring term (March 1 – May 31, 2024)</p>
                 <p class="card-text"><strong>Application Materials:</strong> Send to <a
-                    href="mailto:ABC@organization.org">ABC@organization.org</a> (i) a resume, (ii) academic transcript(s),
+                    href="mailto:ABC@organization.org">ABC@organization.org</a> (i) a resume, (ii) academic
+                  transcript(s),
                   and (iii) a statement of interest (not to exceed two pages)</p>
                 <p class="card-text"><strong>Deadline:</strong> February 20, 2024</p>
                 <button type="button" class="btn btn-primary" data-bs-toggle="modal"
@@ -357,7 +361,8 @@
 
     <!-- Toast Containers -->
     <div class="toast-container">
-      <div id="searchToast" class="toast align-items-center" role="alert" aria-live="assertive" aria-atomic="true" data-bs-delay="3000">
+      <div id="searchToast" class="toast align-items-center" role="alert" aria-live="assertive" aria-atomic="true"
+        data-bs-delay="3000">
         <div class="d-flex">
           <div id="toastMessage" class="toast-body"></div>
           <button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
@@ -370,6 +375,7 @@
       crossorigin="anonymous"></script>
     <script src="./scripts/filter-search.js"></script>
     <script src="./scripts/scroll-to-top"></script>
+    <script src="./scripts/dark-mode.js"></script>
 
 
     <button class="scroll-to-top">↑</button>
