@@ -92,6 +92,9 @@ body.dark-mode {
     overflow: auto;
     z-index: 100;
 }
+.sidebar h4{
+    font-size: 1rem
+}
 
 .sidebar.dark-mode {
     background-color: #333333;
@@ -566,4 +569,17 @@ footer.dark-mode {
     position: -webkit-sticky;
     position: sticky;
     top: 70px; /* Adjust based on your navbar height */
+}
+.job-count {
+    font-weight: bold;
+}
+.job-count p{
+    font-size: 1rem;
+    font-weight: bold;
+    color: #a11a1a;
+    
+}
+
+.job-count.dark-mode {
+    color: #4db6ac; /* Calming teal for dark mode */
 }
