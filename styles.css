@@ -480,7 +480,7 @@ footer a {
 
 /* Dark Mode styles */
 body.dark-mode {
-    background-color: #121212; /* Softer black */
+    background-color: #1c1c1c !important; /* Dark grey */
     color: #e0e0e0; /* Softer white */
 }
 
