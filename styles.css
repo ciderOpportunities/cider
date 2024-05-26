@@ -77,9 +77,10 @@ body.dark-mode {
     color: #b31b1b;
 }
 
-.d-flex {
+.flex {
     display: flex;
-    flex-wrap: wrap;
+
+ 
 }
 
 .sidebar {
@@ -88,9 +89,6 @@ body.dark-mode {
     background-color: #fff;
     border-right: 1px solid #ddd;
     height: 100vh; /* Adjusted height */
-    position: fixed;
-    top: 70px; /* Adjust top to be below the fixed navbar */
-    left: 0;
     overflow: auto;
     z-index: 100;
 }
@@ -107,7 +105,6 @@ body.dark-mode {
 }
 
 .container {
-    margin-left: 21% !important; /* Adjusted to match increased sidebar width */
     margin-top: 0 !important;
     width: calc(100% - 21%);
     max-width: 1200px; /* Set maximum width */
@@ -311,10 +308,15 @@ footer a {
     .sidebar {
         width: 100%;
         height: auto;
-        position: relative;
-        top: 0;
+        position: relative!important;
         border-right: none;
+        top: 0!important;
         box-shadow: none;
+        padding-top: 0!important;
+    }
+    .flex{
+        flex-direction: column;
+        padding-top: 0;
     }
     .filters-container {
         display: flex;
@@ -363,6 +365,7 @@ footer a {
         border-right: none;
         box-shadow: none;
     }
+    
 
     .container {
         margin-left: 0;
@@ -541,4 +544,9 @@ footer.dark-mode {
 
 .footer-bottom.dark-mode p {
     color: #e0e0e0;
+}
+.sidebar {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 70px; /* Adjust based on your navbar height */
 }
