@@ -564,7 +564,6 @@
   .sidebar.dark-mode {
     background-color: #1c1c1c; /* Dark grey */
     color: #e0e0e0;
-    border-right: 1px solid #333333; /* Border for distinction */
   }
 
   .container.dark-mode {
