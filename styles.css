@@ -701,7 +701,7 @@ nav button span {
     display: block;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 992px) {
     nav ul.navbar-menu {
         display: none;
     }
