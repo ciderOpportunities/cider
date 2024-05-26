@@ -26,6 +26,7 @@ body {
     z-index: 1000;
     width: 100%;
     padding: 0 20px;
+    height: fit-content; /* Set height for larger screens */
 }
 
 .nav {
@@ -33,8 +34,9 @@ body {
 }
 
 .navbar-brand img {
-    height: 40px;
+    height: 30px;
     margin-right: 20px;
+    max-width: 200px;
 }
 
 .navbar-toggler {
@@ -42,8 +44,7 @@ body {
 }
 
 .nav-link {
-    color: #333 !important;
-    font-weight: 700;
+    color: black !important;
     padding: 0 15px;
 }
 
@@ -79,12 +80,10 @@ body {
     color: #b31b1b;
 }
 
-.sort-group, .search-group {
-    max-width: 260px!important;
-}
+
 
 .container {
-    margin-left: 21%!important; /* Adjusted to match increased sidebar width */
+    margin-left: 21% !important; /* Adjusted to match increased sidebar width */
     margin-top: 0 !important;
     width: calc(100% - 21%);
     max-width: 1200px; /* Set maximum width */
@@ -359,7 +358,7 @@ footer a {
         padding: 10px;
     }
     .navbar-brand img {
-        max-width: 250px;
+        max-width: 200px;
     }
 
     .container {
@@ -376,6 +375,13 @@ footer a {
     .container {
         max-width: none !important;
     }
+    .navbar {
+        height: 70px;
+    }
+    .navbar-brand img {
+        height: 80px!important;
+    }
+    
 }
 
 .navbar-toggler {
@@ -410,12 +416,12 @@ footer a {
 
 .scroll-to-top {
     position: fixed;
-    bottom: 20px;
+    bottom: 0px;
     right: 20px;
     background-color: #b31b1b;
     color: #fff;
     padding: 10px 15px;
-    border-radius: 50%;
+    border-radius: 75%;
     cursor: pointer;
     display: none;
     z-index: 10000;
@@ -425,3 +431,4 @@ footer a {
 .scroll-to-top:hover {
     background-color: #a11a1a;
 }
+
