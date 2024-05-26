@@ -630,7 +630,9 @@
   .job-count.dark-mode {
     color: #4db6ac; /* Calming teal for dark mode */
   }
- 
+ .menu.dark-mode {
+    --c: white; /* the color */
+  }
 
   .modal-content {
     background-color: #fff;

@@ -13,7 +13,7 @@ $(document).ready(function() {
         $('.footer-bottom').toggleClass('dark-mode');
         $('.job-count').toggleClass('dark-mode');
         $('.modal-content').toggleClass('dark-mode');
-        $('.menu').toggleClass('dark-mode');
         $('.btn-close').toggleClass('dark-mode');
+        $('.menu').toggleClass('dark-mode');
     });
 });
