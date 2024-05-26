@@ -24,16 +24,18 @@ $(function() {
 
   function performSearch() {
     const searchValue = $('#searchInput').val().toLowerCase();
+    const filterValue = $('input[name="filter"]:checked').val();
     const cards = $('.opportunity-card');
     let hasResults = false;
 
     cards.each(function() {
       const cardText = $(this).text().toLowerCase();
-      if (cardText.includes(searchValue)) {
-        $(this).show();
+      const card = $(this);
+      if (cardText.includes(searchValue) && (filterValue === 'all' || card.hasClass(filterValue))) {
+        card.show();
         hasResults = true;
       } else {
-        $(this).hide();
+        card.hide();
       }
     });
 
@@ -77,31 +79,7 @@ $(function() {
   });
 
   $('input[name="filter"]').on('change', function() {
-    const filterValue = $(this).val();
-    const cards = $('.opportunity-card');
-    let hasResults = false;
-
-    cards.each(function() {
-      const card = $(this);
-      if (filterValue === 'all' || card.hasClass(filterValue)) {
-        card.show();
-        hasResults = true;
-      } else {
-        card.hide();
-      }
-    });
-
-    const noResultsElement = $('.no-results');
-    if (!hasResults) {
-      if (noResultsElement.length === 0) {
-        const noResultsMessage = $('<div class="no-results"><p>No opportunities found for the selected filter.</p></div>');
-        $('.container').append(noResultsMessage);
-      }
-    } else {
-      noResultsElement.remove();
-    }
-
-    showToast(hasResults ? `${$('.opportunity-card:visible').length} items found.` : '0 items found.', hasResults);
+    performSearch();
   });
 
   $('#sortSelect').on('change', function() {
