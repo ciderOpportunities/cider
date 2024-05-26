@@ -1,22 +1,16 @@
 $(function() {
   var availableTags = [
-    "Internship", "Part-Time", "Full-Time", "Remote", "On-Site", "Hybrid", "Accounting", "Administration", "Agriculture",
-    "Analytics", "Art", "Biotechnology", "Business Development", "Communications", "Construction", "Consulting",
-    "Customer Service", "Data Science", "Design", "Education", "Engineering", "Entertainment", "Environmental Science",
-    "Event Planning", "Finance", "Food Service", "Government", "Healthcare", "Hospitality", "Human Resources",
-    "Information Technology", "Journalism", "Law", "Legal", "Logistics", "Management", "Manufacturing", "Marketing",
-    "Media", "Medical", "Non-Profit", "Nursing", "Operations", "Pharmaceutical", "Photography", "Product Management",
-    "Project Management", "Public Relations", "Quality Assurance", "Real Estate", "Research", "Retail", "Sales",
-    "Science", "Social Media", "Software Development", "Sports", "Strategy", "Supply Chain", "Sustainability", "Teaching",
-    "Telecommunications", "Transportation", "Travel", "Veterinary", "Video Production", "Web Development", "Writing",
-    "Graphic Design", "Interior Design", "UX/UI Design", "Machine Learning", "Artificial Intelligence", "Blockchain",
-    "Cloud Computing", "Cybersecurity", "Data Analysis", "DevOps", "E-commerce", "Electronics", "Energy", "FinTech",
-    "Gaming", "Geology", "Humanities", "Insurance", "IoT", "Language Services", "Library Science", "Logistics and Supply Chain",
-    "Marine Biology", "Mathematics", "Mechanical Engineering", "Mental Health", "Microbiology", "Nanotechnology",
-    "Neuroscience", "Nutrition", "Oceanography", "Oil and Gas", "Paralegal", "Petroleum Engineering", "Philosophy",
-    "Physics", "Physiotherapy", "Political Science", "Public Health", "Quantum Computing", "Robotics", "Sociology",
-    "Statistics", "Textile Design", "Urban Planning", "Veterinary Medicine", "Zoology"
-  ];
+    "Agricultural Economics", "Agricultural Policy", "Agricultural Development", "Agribusiness", "Agri-finance",
+    "Agroecology", "Agroforestry", "Animal Science", "Aquaculture", "Biotechnology", "Crop Science", "Environmental Economics",
+    "Farm Management", "Food Security", "Food Systems", "Horticulture", "International Development", "Irrigation",
+    "Land Use Planning", "Livestock Management", "Natural Resource Management", "Plant Breeding", "Rural Development",
+    "Soil Science", "Sustainable Agriculture", "Agricultural Education", "Agricultural Engineering", "Agricultural Extension",
+    "Agro-industry", "Climate Change Adaptation", "Community Development", "Development Economics", "Ecological Economics",
+    "Fisheries Management", "Food Policy", "Gender and Development", "Global Health", "Humanitarian Aid", "International Trade",
+    "Nutrition", "Organic Farming", "Pest Management", "Public Health", "Rural Sociology", "Social Entrepreneurship",
+    "Value Chain Development", "Water Resource Management", "Wildlife Conservation"
+];
+
 
   $("#searchInput").autocomplete({
     source: availableTags
