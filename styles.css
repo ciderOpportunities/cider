@@ -583,3 +583,16 @@ footer.dark-mode {
 .job-count.dark-mode {
     color: #4db6ac; /* Calming teal for dark mode */
 }
+.modal-content {
+    background-color: #fff;
+    color: #000;
+}
+
+.modal-content.dark-mode {
+    background-color: #1c1c1c;
+    color: #e0e0e0;
+}
+
+.modal-content.dark-mode a {
+    color: #4db6ac; /* Calming teal for links */
+}

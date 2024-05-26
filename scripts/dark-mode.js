@@ -5,13 +5,14 @@ $(document).ready(function() {
         $('.navbar').toggleClass('dark-mode');
         $('.nav-link').toggleClass('dark-mode');
         $('.sidebar').toggleClass('dark-mode');
-        $('.content-container').toggleClass('dark-mode');
+        $('.container').toggleClass('dark-mode');
         $('footer').toggleClass('dark-mode');
         $('.opportunity-card').toggleClass('dark-mode');
         $('.footer-logo-container').toggleClass('dark-mode');
         $('.footer-section').toggleClass('dark-mode');
         $('.footer-bottom').toggleClass('dark-mode');
         $('.job-count').toggleClass('dark-mode');
+        $('.modal-content').toggleClass('dark-mode'); // Add this line
     });
 
     // Scroll to Top Button
@@ -30,13 +31,11 @@ $(document).ready(function() {
         return false;
     });
 
-    // Job Count
+    // Count and update job postings
     function updateJobCount() {
-        const jobCount = $('.opportunity-card').length;
+        const jobCount = $('.job-post').length;
         $('#jobCount').text(jobCount);
     }
 
-    // Update job count on page load
-    updateJobCount();
-
+ 
 });
