@@ -9,9 +9,11 @@
     transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for dark mode */
     overflow-x: hidden; /* Prevent horizontal scrolling */
   }
+  
 
   main {
     max-width: auto;
+    transition: 0.3s ease; 
   }
 
   body {
@@ -34,8 +36,70 @@
     width: 100%;
     padding: 0 20px;
     height: fit-content; /* Set height for larger screens */
+    align-items: center!important;
   }
-
+  .menu {
+    --s: 20px; /* control the size */
+    --c: black; /* the color */
+    align-items: center;
+    height: var(--s);
+    aspect-ratio: 1;
+    border: none;
+    padding: 0;
+    border-inline: calc(var(--s)/2) solid #0000; 
+    box-sizing: content-box;
+    --_g1: linear-gradient(var(--c) 20%,#0000 0 80%,var(--c) 0) 
+           no-repeat content-box border-box;
+    --_g2: radial-gradient(circle closest-side at 50% 12.5%,var(--c) 95%,#0000) 
+           repeat-y content-box border-box;
+    background: 
+      var(--_g2) left  var(--_p,0px) top,
+      var(--_g1) left  calc(var(--s)/10 + var(--_p,0px)) top,
+      var(--_g2) right var(--_p,0px) top,
+      var(--_g1) right calc(var(--s)/10 + var(--_p,0px)) top;
+    background-size: 
+      20% 80%,
+      40% 100%;
+    position: relative;
+    clip-path: inset(0 25%);
+    -webkit-mask: linear-gradient(90deg,#0000,#000 25% 75%,#0000);
+    cursor: pointer;
+    transition: 
+      background-position .3s var(--_s,.3s), 
+      clip-path 0s var(--_s,.6s);
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    appearance:none;
+  }
+  .menu:before,
+  .menu:after {
+    content:"";
+    position: absolute;
+    border-radius: var(--s);
+    inset: 40% 0;
+    background: var(--c);
+    transition: transform .3s calc(.3s - var(--_s,.3s));
+  }
+  
+  .menu:checked {
+    clip-path: inset(0);
+    --_p: calc(-1*var(--s));
+    --_s: 0s;
+  }
+  .menu:checked:before {
+    transform: rotate(45deg);
+  }
+  .menu:checked:after {
+    transform: rotate(-45deg);
+  }
+  .menu:focus-visible {
+    clip-path: none;
+    -webkit-mask: none;
+    border: none;
+    outline: 2px solid var(--c);
+    outline-offset: 5px;
+  }
+  
   .navbar.dark-mode {
     background-color: #333333 !important;
     color: #ffffff !important;
@@ -43,6 +107,7 @@
 
   .nav {
     border-bottom: 1px solid black !important;
+    align-items: center;
   }
 
   .navbar-toggler {
@@ -463,10 +528,11 @@
 
   .toast-container {
     position: fixed;
-    top: 80px; /* Adjust based on your navbar height */
+    top: 0px; /* Adjust based on your navbar height */
     left: 50%;
     transform: translateX(-50%);
     z-index: 1050;
+    width: 50%;
   }
 
   .toast-body {
@@ -477,24 +543,7 @@
     color: #155724;
   }
 
-  .scroll-to-top {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: #b31b1b;
-    color: #fff;
-    padding: 10px 15px;
-    border-radius: 50%;
-    cursor: pointer;
-    display: none;
-    z-index: 10000;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-  }
 
-  .scroll-to-top:hover {
-    background-color: #a11a1a;
-    transform: scale(1.1);
-  }
 
   /* Dark Mode styles */
   body.dark-mode {
@@ -581,6 +630,7 @@
   .job-count.dark-mode {
     color: #4db6ac; /* Calming teal for dark mode */
   }
+ 
 
   .modal-content {
     background-color: #fff;
@@ -594,6 +644,9 @@
 
   .modal-content.dark-mode a {
     color: #4db6ac; /* Calming teal for links */
+  }
+  .btn-close.dark-mode{
+    background-color: white;
   }
 
   nav {
@@ -626,7 +679,6 @@
     background: none;
     width: 30px;
     height: 40px;
-    margin-top: 20px;
     border: none;
     float: right;
     display: inline-block;

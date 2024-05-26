@@ -12,33 +12,8 @@ $(document).ready(function() {
         $('.footer-section').toggleClass('dark-mode');
         $('.footer-bottom').toggleClass('dark-mode');
         $('.job-count').toggleClass('dark-mode');
-        $('.modal-content').toggleClass('dark-mode'); // Add this line
+        $('.modal-content').toggleClass('dark-mode');
+        $('.menu').toggleClass('dark-mode');
+        $('.btn-close').toggleClass('dark-mode');
     });
-
-    // Scroll to Top Button
-    const scrollToTopBtn = $('.scroll-to-top');
-
-    $(window).scroll(function() {
-        if ($(this).scrollTop() > 100) {
-            scrollToTopBtn.fadeIn();
-        } else {
-            scrollToTopBtn.fadeOut();
-        }
-    });
-
-    scrollToTopBtn.click(function() {
-        $('html, body').animate({ scrollTop: 0 }, 600);
-        return false;
-    });
-
-    // Count and update job postings
-    function updateJobCount() {
-        const jobCount = $('.job-post').length;
-        $('#jobCount').text(jobCount);
-    }
-    
-
- 
 });
-
-  
