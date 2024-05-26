@@ -5,8 +5,7 @@ body, html {
     margin: 0;
     padding: 0;
     height: 100%;
-    font-family: 'Lato', sans-serif; /* Updated font */
- 
+    font-family: 'Lato', sans-serif;
 }
 
 main {
@@ -18,7 +17,7 @@ body {
     flex-direction: column;
     min-height: 100vh;
     color: #333;
-    padding-top: 70px; /* Add padding to prevent content from being hidden under the fixed navbar */
+    padding-top: 70px; /* Prevent content from being hidden under the fixed navbar */
 }
 
 .navbar {
@@ -151,11 +150,18 @@ body {
     flex-direction: column;
     align-items: center;
     padding: 20px;
+    position: relative; /* Add relative positioning */
 }
 
 .opportunity-card:hover {
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
     transform: translateY(-5px);
+    cursor: pointer;
+}
+
+.opportunity-card a {
+    color: inherit;
+    text-decoration: none;
 }
 
 .card-body h5 {
@@ -353,7 +359,7 @@ footer a {
         padding: 10px;
     }
     .navbar-brand img {
-        max-width: 150px;
+        max-width: 250px;
     }
 
     .container {
@@ -400,4 +406,22 @@ footer a {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     background-color: #d4edda;
     color: #155724;
+}
+
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #b31b1b;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+    z-index: 10000;
+    transition: background-color 0.3s ease;
+}
+
+.scroll-to-top:hover {
+    background-color: #a11a1a;
 }
