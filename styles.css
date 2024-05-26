@@ -420,9 +420,28 @@ footer a {
     }
     .navbar {
         height: 70px;
+        
     }
     .navbar-brand img {
         height: 80px!important;
+    }
+    
+    
+}
+
+@media (min-width: 2000px) {
+    main{
+        padding: 0 20% 0 20%!important;
+        margin: 0 auto;
+    }
+    nav{
+        padding: 0 20% 0 20%!important;
+        margin: 0 auto;
+    }
+    footer{
+        margin: 0 auto;
+
+
     }
     
 }
@@ -475,8 +494,6 @@ footer a {
     background-color: #a11a1a;
     transform: scale(1.1);
 }
-/* Existing CSS */
-/* Existing CSS */
 
 /* Dark Mode styles */
 body.dark-mode {
