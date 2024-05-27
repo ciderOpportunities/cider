@@ -9,8 +9,7 @@ $(function() {
     "Fisheries Management", "Food Policy", "Gender and Development", "Global Health", "Humanitarian Aid", "International Trade",
     "Nutrition", "Organic Farming", "Pest Management", "Public Health", "Rural Sociology", "Social Entrepreneurship",
     "Value Chain Development", "Water Resource Management", "Wildlife Conservation"
-];
-
+  ];
 
   $("#searchInput").autocomplete({
     source: availableTags
@@ -43,17 +42,23 @@ $(function() {
       noResultsElement.remove();
     }
 
-    showToast(hasResults ? `${$('.opportunity-card:visible').length} items found.` : '0 items found.', hasResults);
+    const resultCount = $('.opportunity-card:visible').length;
+    const resultMessage = resultCount === 1 ? '1 opportunity found.' : `${resultCount} opportunities found.`;
+    showToast(hasResults ? resultMessage : 'No opportunities found.', hasResults);
   }
 
   function showToast(message, success) {
     const toastElement = new bootstrap.Toast($('#searchToast'));
     const toastMessage = $('#toastMessage');
+    const toastIcon = $('#toastIcon');
     toastMessage.text(message);
-    toastMessage.css({
-      'background-color': success ? '#d4edda' : '#f8d7da',
-      'color': success ? '#155724' : '#721c24'
-    });
+    if (success) {
+      $('#searchToast').removeClass('toast-error toast-info').addClass('toast-success');
+      toastIcon.html('<i class="bi bi-check-circle-fill toast-icon"></i>');
+    } else {
+      $('#searchToast').removeClass('toast-success toast-info').addClass('toast-error');
+      toastIcon.html('<i class="bi bi-exclamation-triangle-fill toast-icon"></i>');
+    }
     toastElement.show();
   }
 
@@ -105,5 +110,3 @@ $(function() {
     $(modalId).modal('show');
   });
 });
-
-

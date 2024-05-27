@@ -414,30 +414,56 @@ footer a {
 }
 
 /* Toast Styles */
-.toast-body {
-    background-color: #d4edda;
-    color: #155724;
-    padding: 15px;
-    border-radius: 4px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
 .toast-container {
-    position: fixed;
-    top: 0px; /* Adjust based on your navbar height */
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 1050;
-    width: 50%;
-}
-
-.toast-body {
-    padding: 15px;
-    border-radius: 4px;
+    z-index: 1100;
+  }
+  
+  .toast {
+    border-radius: 8px;
+    padding: 0.5rem 1rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    background-color: #d4edda;
-    color: #155724;
-}
+    display: flex;
+    align-items: center;
+    min-height: 40px;
+    max-height: 50px;
+    width: fit-content;
+  }
+  
+  .toast-body {
+    display: flex;
+    align-items: center;
+    font-size: 0.875rem;
+    flex-grow: 1;
+  }
+  
+  .toast-icon {
+    font-size: 1.25rem;
+    margin-right: 10px;
+  }
+  
+  .toast-success {
+    background-color: #218838;
+    color: white;
+  }
+  
+  .toast-error {
+    background-color: #dc3545;
+    color: white;
+  }
+  
+  .toast-info {
+    background-color: #17a2b8;
+    color: white;
+  }
+  
+  .btn-close {
+    filter: invert(1);
+    margin-left: auto;
+    margin-right: 0;
+  }
+  
+  
+
 
 /* Dark Mode Styles */
 body.dark-mode {
