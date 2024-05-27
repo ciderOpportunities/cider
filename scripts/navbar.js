@@ -14,7 +14,6 @@
 
     $('.navbar-collapse').on('hidden.bs.collapse', function () {
         $('main').css('margin-top', ''); // Reset margin-top when menu is closed
-        $('.collapse').css('padding-left', '20px'); // Reset margin-top when menu is closed
     });
 
     $('.navbar-collapse').on('shown.bs.collapse', function () {
