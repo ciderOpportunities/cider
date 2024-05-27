@@ -632,7 +632,7 @@ body.dark-mode {
   
 }
 
-@media (min-width:1800px) {
+@media (min-width:2000px) {
     main {
         padding: 0 20% 0 20% !important;
         margin: 0 auto;
