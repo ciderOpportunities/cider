@@ -649,7 +649,8 @@ body.dark-mode {
     }
 
     .opportunity-card{
-        width: 100%;
+        width: 90%;
+        z-index: 5000;
     }
 
     .sidebar {
