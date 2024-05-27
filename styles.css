@@ -57,6 +57,7 @@ body.dark-mode {
 .nav-link {
     color: black !important;
     padding: 0 15px;
+    padding-left: 0;
 }
 
 .nav-link.dark-mode {
@@ -632,20 +633,32 @@ body.dark-mode {
   
 }
 
-@media (min-width:2000px) {
-    main {
-        padding: 0 20% 0 20% !important;
+ @media (min-width:2000px) {
+    main{
+        max-width: 1700px !important; 
         margin: 0 auto;
+    }
+    .container {
+        margin-left: 560px;
+    }
+    nav{
+        padding: 0 10%!important;
+    }
+    .footer-logo-container,.footer-container,.footer-bottom{
+        padding: 0 10%;
     }
 
-    nav {
-        padding: 0 20% 0 20% !important;
-        margin: 0 auto;
+    .opportunity-card{
+        width: 100%;
     }
 
-    footer {
-        margin: 0 auto;
+    .sidebar {
+       width: 500px!important;
+       position: fixed;
+       left: 10%;
+       margin-top: 4%;
     }
+    
 }
 
 /* Navbar Toggle Button Styles */
