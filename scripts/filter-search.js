@@ -8,7 +8,7 @@ $(function() {
     "Agro-industry", "Climate Change Adaptation", "Community Development", "Development Economics", "Ecological Economics",
     "Fisheries Management", "Food Policy", "Gender and Development", "Global Health", "Humanitarian Aid", "International Trade",
     "Nutrition", "Organic Farming", "Pest Management", "Public Health", "Rural Sociology", "Social Entrepreneurship",
-    "Value Chain Development", "Water Resource Management", "Wildlife Conservation"
+    "Value Chain Development", "Water Resource Management", "Wildlife Conservation","Policy"
   ];
 
   $("#searchInput").autocomplete({

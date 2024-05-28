@@ -15,5 +15,7 @@ $(document).ready(function() {
         $('.modal-content').toggleClass('dark-mode');
         $('.btn-close').toggleClass('dark-mode');
         $('.menu').toggleClass('dark-mode');
+        $('.dropicon').toggleClass('dark-mode');
+        $('.dropdown-menu').toggleClass('dark-mode');
     });
 });

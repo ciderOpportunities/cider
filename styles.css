@@ -63,6 +63,86 @@ body.dark-mode {
 .nav-link.dark-mode {
     color: white !important;
 }
+/* Hover effect for nav links */
+.nav-link, .dropdown-item {
+    position: relative;
+    display: inline-block;
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  .nav-link::after, .dropdown-item::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    display: block;
+    margin-top: 5px;
+    left: 0;
+    background: #b31b1b;
+    transition: width 0.3s ease;
+    -webkit-transition: width 0.3s ease;
+  }
+  
+  .nav-link:hover::after, .dropdown-item:hover::after {
+    width: 100%;
+  }
+  
+  .nav-link:hover, .dropdown-item:hover {
+    color: #b31b1b;
+  }
+  
+  /* Ensure the dropdown opens on hover */
+  .dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0; /* Remove any offset */
+  }
+  
+  /* Make the dropdown menu look better */
+  .dropdown-menu {
+    border-radius: 0.25rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  }
+  
+  .dropdown-menu.dark-mode{
+      background-color: #333333;
+  }
+  
+  .dropdown-item {
+    padding: 0.75rem 1.5rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  .dropdown-item:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  /* Dark text for dropdown items in light mode */
+  body:not(.dark-mode) .dropdown-item {
+    color: #343a40;
+  }
+  
+  body:not(.dark-mode) .dropdown-item:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+  
+  .mycustomdropdownicon img{
+      max-width: 13px;
+      margin-left: 2px;
+  
+  }
+
+/* Change icon color to white in dark mode using filter */
+.dropicon {
+    transition: filter 0.3s ease;
+  }
+  
+  body.dark-mode .dropicon {
+    filter: invert(1) brightness(2); /* Inverts the colors and increases brightness */
+  }
+  
+  
 
 .menu {
     --s: 20px; /* control the size */
