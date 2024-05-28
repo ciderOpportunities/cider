@@ -39,17 +39,15 @@ body.dark-mode {
     height: fit-content; /* Set height for larger screens */
     align-items: center!important;
 }
-.navbar-brand img{
-    max-width: 200px;
-}
 
 .navbar-brand img {
+    max-width: 200px;
     transition: filter 0.3s ease;
-  }
-  
-  body.dark-mode .navbar-brand img {
+}
+
+body.dark-mode .navbar-brand img {
     filter: invert(1) brightness(2); /* Inverts the colors and increases brightness */
-  }
+}
 
 .navbar.dark-mode {
     background-color: #333333 !important;
@@ -74,6 +72,7 @@ body.dark-mode {
 .nav-link.dark-mode {
     color: white !important;
 }
+
 /* Hover effect for nav links */
 .nav-link, .dropdown-item {
     position: relative;
@@ -81,9 +80,9 @@ body.dark-mode {
     color: #fff;
     text-decoration: none;
     transition: color 0.3s;
-  }
-  
-  .nav-link::after, .dropdown-item::after {
+}
+
+.nav-link::after, .dropdown-item::after {
     content: '';
     position: absolute;
     width: 0;
@@ -94,72 +93,65 @@ body.dark-mode {
     background: #b31b1b;
     transition: width 0.3s ease;
     -webkit-transition: width 0.3s ease;
-  }
-  
-  .nav-link:hover::after, .dropdown-item:hover::after {
+}
+
+.nav-link:hover::after, .dropdown-item:hover::after {
     width: 100%;
-  }
-  
-  .nav-link:hover, .dropdown-item:hover {
+}
+
+.nav-link:hover, .dropdown-item:hover {
     color: #b31b1b;
-  }
-  
-  /* Ensure the dropdown opens on hover */
-  .dropdown:hover .dropdown-menu {
+}
+
+/* Ensure the dropdown opens on hover */
+.dropdown:hover .dropdown-menu {
     display: block;
     margin-top: 0; /* Remove any offset */
-  }
-  
-  /* Make the dropdown menu look better */
-  .dropdown-menu {
+}
+
+/* Make the dropdown menu look better */
+.dropdown-menu {
     border-radius: 0.25rem;
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
-  }
-  
-  .dropdown-menu.dark-mode{
-      background-color: #333333;
-  }
-  
-  .dropdown-item {
+}
+
+.dropdown-menu.dark-mode {
+    background-color: #333333;
+}
+
+.dropdown-item {
     padding: 0.75rem 1.5rem;
     transition: background-color 0.3s ease;
-  }
-  
-  .dropdown-item:hover {
+}
+
+.dropdown-item:hover {
     background-color: rgba(255, 255, 255, 0.1);
-  }
-  
-  /* Dark text for dropdown items in light mode */
-  body:not(.dark-mode) .dropdown-item {
+}
+
+/* Dark text for dropdown items in light mode */
+body:not(.dark-mode) .dropdown-item {
     color: #343a40;
-  }
-  
-  body:not(.dark-mode) .dropdown-item:hover {
+}
+
+body:not(.dark-mode) .dropdown-item:hover {
     background-color: rgba(0, 0, 0, 0.1);
-  }
-  
-  .mycustomdropdownicon img{
-      max-width: 13px;
-      margin-left: 2px;
-  
-  }
+}
+
+.mycustomdropdownicon img {
+    max-width: 13px;
+    margin-left: 2px;
+}
 
 /* Change icon color to white in dark mode using filter */
 .dropicon {
     transition: filter 0.3s ease;
-  }
-  
-  body.dark-mode .dropicon {
+}
+
+body.dark-mode .dropicon {
     filter: invert(1) brightness(2); /* Inverts the colors and increases brightness */
-  }
+}
 
-
-
-
-
-  
-  
-
+/* Menu Styles */
 .menu {
     --s: 20px; /* control the size */
     --c: black; /* the color */
@@ -168,26 +160,26 @@ body.dark-mode {
     aspect-ratio: 1;
     border: none;
     padding: 0;
-    border-inline: calc(var(--s)/2) solid #0000; 
+    border-inline: calc(var(--s)/2) solid #0000;
     box-sizing: content-box;
-    --_g1: linear-gradient(var(--c) 20%,#0000 0 80%,var(--c) 0) 
+    --_g1: linear-gradient(var(--c) 20%,#0000 0 80%,var(--c) 0)
            no-repeat content-box border-box;
-    --_g2: radial-gradient(circle closest-side at 50% 12.5%,var(--c) 95%,#0000) 
+    --_g2: radial-gradient(circle closest-side at 50% 12.5%,var(--c) 95%,#0000)
            repeat-y content-box border-box;
-    background: 
+    background:
       var(--_g2) left  var(--_p,0px) top,
       var(--_g1) left  calc(var(--s)/10 + var(--_p,0px)) top,
       var(--_g2) right var(--_p,0px) top,
       var(--_g1) right calc(var(--s)/10 + var(--_p,0px)) top;
-    background-size: 
+    background-size:
       20% 80%,
       40% 100%;
     position: relative;
     clip-path: inset(0 25%);
     -webkit-mask: linear-gradient(90deg,#0000,#000 25% 75%,#0000);
     cursor: pointer;
-    transition: 
-      background-position .3s var(--_s,.3s), 
+    transition:
+      background-position .3s var(--_s,.3s),
       clip-path 0s var(--_s,.6s);
     -webkit-appearance:none;
     -moz-appearance:none;
@@ -403,7 +395,7 @@ body.dark-mode {
     color: #4db6ac; /* Calming teal for links */
 }
 
-.btn-close.dark-mode{
+.btn-close.dark-mode {
     background-color: white;
 }
 
@@ -512,9 +504,9 @@ footer a {
 /* Toast Styles */
 .toast-container {
     z-index: 1100;
-  }
-  
-  .toast {
+}
+
+.toast {
     border-radius: 8px;
     padding: 0.5rem 1rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -523,54 +515,51 @@ footer a {
     min-height: 40px;
     max-height: 50px;
     width: fit-content;
-  }
-  
-  .toast-body {
+}
+
+.toast-body {
     display: flex;
     align-items: center;
     font-size: 0.875rem;
     flex-grow: 1;
-  }
-  
-  .toast-icon {
+}
+
+.toast-icon {
     font-size: 1.25rem;
     margin-right: 10px;
-  }
-  
-  .toast-success {
+}
+
+.toast-success {
     background-color: #218838;
     color: white;
-  }
-  
-  .toast-error {
+}
+
+.toast-error {
     background-color: #dc3545;
     color: white;
-  }
-  
-  .toast-info {
+}
+
+.toast-info {
     background-color: #17a2b8;
     color: white;
-  }
-  
-  .btn-close {
+}
+
+.btn-close {
     background-color: #333;
     filter: none; /* Remove any previously applied filters */
-  }
-  
-  .btn-close:hover {
-    background-color: #555;
-  }
-  
-  body.dark-mode .btn-close {
-    background-color: #fff;
-  }
-  
-  body.dark-mode .btn-close:hover {
-    background-color: #ccc;
-  }
-  
-  
+}
 
+.btn-close:hover {
+    background-color: #555;
+}
+
+body.dark-mode .btn-close {
+    background-color: #fff;
+}
+
+body.dark-mode .btn-close:hover {
+    background-color: #ccc;
+}
 
 /* Dark Mode Styles */
 body.dark-mode {
@@ -652,7 +641,7 @@ body.dark-mode {
         box-shadow: none;
         padding-top: 0 !important;
     }
-    .sidebar.dark-mode{
+    .sidebar.dark-mode {
         box-shadow: none;
     }
 
@@ -745,21 +734,20 @@ body.dark-mode {
     }
 
     .container {
-      
         align-items: center; /* Center the individual cards */
     }
 
     .opportunity-card {
         width: 100%; /* Adjust width for extra small screens */
     }
-    .filters-container{
+
+    .filters-container {
         justify-content: space-between;
     }
 
-    .col1{
+    .col1 {
         margin-right: 0;
     }
-
 }
 
 @media (min-width: 992px) {
@@ -770,37 +758,33 @@ body.dark-mode {
     .navbar {
         height: 70px;
     }
-
-  
 }
 
- @media (min-width:1800px) {
-    main{
-        max-width: 1700px !important; 
+@media (min-width:1800px) {
+    main {
+        max-width: 1700px !important;
         margin: 0 auto;
     }
     .container {
         margin-left: 560px;
     }
-    nav{
-        padding: 0 10%!important;
+    nav {
+        padding: 0 10% !important;
     }
-    .footer-logo-container,.footer-container,.footer-bottom{
+    .footer-logo-container, .footer-container, .footer-bottom {
         padding: 0 10%;
     }
 
-    .opportunity-card{
+    .opportunity-card {
         width: 90%;
-      
     }
 
     .sidebar {
-       width: 500px!important;
-       position: fixed;
-       left: 10%;
-       margin-top: 4%;
+        width: 500px !important;
+        position: fixed;
+        left: 10%;
+        margin-top: 4%;
     }
-    
 }
 
 /* Navbar Toggle Button Styles */
@@ -865,6 +849,3 @@ nav button span {
         display: block;
     }
 }
-
-
-
