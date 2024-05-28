@@ -17,5 +17,6 @@ $(document).ready(function() {
         $('.menu').toggleClass('dark-mode');
         $('.dropicon').toggleClass('dark-mode');
         $('.dropdown-menu').toggleClass('dark-mode');
+        $('.navbar-brand').toggleClass('dark-mode');
     });
 });

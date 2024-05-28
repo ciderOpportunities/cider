@@ -39,6 +39,17 @@ body.dark-mode {
     height: fit-content; /* Set height for larger screens */
     align-items: center!important;
 }
+.navbar-brand img{
+    max-width: 200px;
+}
+
+.navbar-brand img {
+    transition: filter 0.3s ease;
+  }
+  
+  body.dark-mode .navbar-brand img {
+    filter: invert(1) brightness(2); /* Inverts the colors and increases brightness */
+  }
 
 .navbar.dark-mode {
     background-color: #333333 !important;
@@ -141,6 +152,11 @@ body.dark-mode {
   body.dark-mode .dropicon {
     filter: invert(1) brightness(2); /* Inverts the colors and increases brightness */
   }
+
+
+
+
+
   
   
 
@@ -849,5 +865,6 @@ nav button span {
         display: block;
     }
 }
+
 
 
