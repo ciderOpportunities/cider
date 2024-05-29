@@ -379,6 +379,11 @@ body.dark-mode .dropicon {
 .modal-body ul {
     padding-left: 20px;
 }
+.deadline{
+    color: #b31b1b!important;
+
+
+}
 
 .modal-body ul li {
     list-style-type: disc;
