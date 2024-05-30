@@ -242,12 +242,11 @@ body.dark-mode .dropicon {
 /* Sidebar Styles */
 .sidebar {
     width: 21%; /* Increased width by 30px */
-    padding: 20px;
+    padding: 0 20px 20px 20px;
     background-color: #fff;
     height: 100vh; /* Adjusted height */
     overflow: auto;
     z-index: 100;
-    margin-top: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -639,7 +638,7 @@ body.dark-mode {
 .sidebar {
     position: sticky;
     top: 0px; /* Adjust based on your navbar height */
-    padding-top: 1%;
+    padding-top: .5%;
 }
 
 /* Responsive Styles */
