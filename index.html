@@ -148,6 +148,7 @@
         <div class="modal-content">
           <div class="modal-header">
             <h5 class="modal-title" id="opportunityModalLabel">Costing Analysis Evidence Mapping Intern</h5>
+            <button id="downloadPDF" class="btn btn-secondary ms-auto">Download as PDF</button>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
@@ -246,10 +247,42 @@
       crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
     <script src="./scripts/filter-search.js"></script>
     <script src="./scripts/scroll-to-top.js"></script>
     <script src="./scripts/dark-mode.js"></script>
     <script src="./scripts/navbar.js"></script>
+    <script>
+      document.getElementById('downloadPDF').addEventListener('click', function () {
+        const { jsPDF } = window.jspdf;
+        const modalContent = document.querySelector('#opportunityModal .modal-content');
+
+        html2canvas(modalContent).then((canvas) => {
+          const imgData = canvas.toDataURL('image/png');
+          const pdf = new jsPDF();
+          const imgProps = pdf.getImageProperties(imgData);
+          const pdfWidth = pdf.internal.pageSize.getWidth();
+          const pdfHeight = (imgProps.height * pdfWidth) / imgProps.width;
+          const pageHeight = pdf.internal.pageSize.getHeight();
+
+          let heightLeft = pdfHeight;
+          let position = 0;
+
+          pdf.addImage(imgData, 'PNG', 0, position, pdfWidth, pdfHeight);
+          heightLeft -= pageHeight;
+
+          while (heightLeft >= 0) {
+            position = heightLeft - pdfHeight;
+            pdf.addPage();
+            pdf.addImage(imgData, 'PNG', 0, position, pdfWidth, pdfHeight);
+            heightLeft -= pageHeight;
+          }
+
+          pdf.save('Opportunity_Details.pdf');
+        });
+      });
+    </script>
   </main>
   <footer class="site-footer">
     <div class="footer-logo-container">
