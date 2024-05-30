@@ -384,6 +384,13 @@ body.dark-mode .dropicon {
 
 
 }
+.switch-container{
+    margin-left: 0px!important;
+    display: flex;
+    height: fit-content;
+
+}
+
 
 .modal-body ul li {
     list-style-type: disc;
@@ -877,6 +884,7 @@ nav button span {
     outline: none;
     transition: background-color 0.3s ease-in-out;
     margin-right: 10px;
+    align-items: center;
   }
   
   #darkModeToggle::before {
