@@ -238,6 +238,9 @@ body.dark-mode .dropicon {
 .flex {
     display: flex;
 }
+.sidebar hr{
+    margin-top: 0px;
+}
 
 /* Sidebar Styles */
 .sidebar {
@@ -873,7 +876,7 @@ nav button span {
   
   #darkModeToggle {
     width: 40px;
-    height: 20px;
+    height: 21.6px;
     background-color: #ccc;
     border-radius: 20px;
     position: relative;
@@ -883,7 +886,9 @@ nav button span {
     outline: none;
     transition: background-color 0.3s ease-in-out;
     margin-right: 10px;
-    align-items: center;
+    display: flex;
+    align-items: center!important;
+
   }
   
   #darkModeToggle::before {
