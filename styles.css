@@ -912,12 +912,12 @@ nav button span {
   }
 /* Collapsible Button Styles */
 .collapsible {
-    background-color: #b31b1b;
+    background-color: #555;
     color: white;
     cursor: pointer;
     padding: 12px 20px;
     width: 100%;
-    border: 2px solid #b31b1b;
+    border: 2px solid  #555;
     text-align: center;
     outline: none;
     font-size: 16px;
@@ -961,8 +961,8 @@ nav button span {
   }
   
   body.dark-mode .collapsible:hover, .collapsible.active {
-    background-color: #555;
-    border-color: #555;
+    background-color: #a11a1a;
+    border-color: #a11a1a;
   }
   
   /* Past Opportunities Styles */
