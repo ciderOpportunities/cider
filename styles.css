@@ -928,7 +928,8 @@ nav button span {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   }
   .collapsible img{
-    width: 25px;
+    max-width: 20px;
+    margin-left: 10px;
   }
   
   .collapsible:hover, .collapsible.active {
@@ -942,8 +943,7 @@ nav button span {
     padding: 15px;
     display: none;
     overflow: auto;
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
+  
     border-radius: 5px;
     margin-top: 10px;
   }
