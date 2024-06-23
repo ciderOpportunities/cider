@@ -992,4 +992,7 @@ nav button span {
   .past-opportunities a:hover {
     color: #a11a1a;
   }
-  
+  .past-title{
+    width: 100%;
+    text-align: center;
+  }
