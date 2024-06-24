@@ -98,14 +98,14 @@
           <input type="text" id="searchInput" class="form-control" placeholder="Search Opportunities">
         </div>
         <br>
-        <!-- <div class="sort-group mt-3">
+        <div class="sort-group mt-3">
           <label for="sortSelect">Sort by:</label>
           <select id="sortSelect" class="form-select">
             <option value="dateDesc">Date (Desc)</option>
             <option value="dateAsc">Date (Asc)</option>
           </select>
-        </div> -->
-        <button type="button" class="collapsible">Past Opportunities <img src="images/click.png" alt=""></button>
+        </div>
+
       </div>
       <!-- Cards start here -->
       <div class="container mt-5">
@@ -114,37 +114,48 @@
         
       
         <!-- Collapsible button for past opportunities -->
-        <div class="collapsible-content">
-          <h3 class="past-title">Past Opportunities</h3>
-          <!-- Example of a past opportunity card -->
-          <div class="opportunity-card card mb-4 on-site internship cornell" data-date="2024-06-10">
-            <div class="row g-0">
-              <div class="col-md-4 d-flex align-items-center justify-content-center">
-                <img src="images/irc.jpeg" class="img-fluid rounded-start" alt="Opportunity Image">
-              </div>
-              <div class="col-md-8">
-                <div class="card-body">
-                  <h5 class="card-title">[Cornell students only] Costing Analysis Evidence Mapping Intern with the <a
-                      href="https://www.rescue.org/" class="text-decoration-underline" target="_blank">International
-                      Rescue Committee (IRC)</a></h5>
-                  <p class="card-text"><strong>IRC Supervisor:</strong> Mikaela Cochran, Advisor, Best Use of Resources</p>
-                  <p class="card-text"><strong>CIDER Faculty Supervisors:</strong> <a
-                      href="https://barrett.dyson.cornell.edu/">Chris Barrett</a>, <a
-                      href="https://facultyprofiles.tufts.edu/jenny-aker">Jenny Aker</a></p>
-                  <p class="card-text"><strong>Anticipated Duration:</strong> Fall term (August 26 – December 9, 2024)</p>
-                  <p class="card-text"><strong>Application Materials:</strong> Send to <a
-                      href="mailto:CIDER@cornell.edu">CIDER@cornell.edu</a> (i) a resume, (ii) academic transcript(s), and
-                    (iii) a statement of interest (not to exceed two pages)</p>
-                  <p class="card-text deadline"><strong>Deadline:</strong> June 10, 2024</p>
-                  <button type="button" class="btn btn-primary" data-bs-toggle="modal"
-                    data-bs-target="#opportunityModal">Read More</button>
+        <div class="accordion" id="pastOpportunitiesAccordion">
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingOne">
+              <button class="accordion-button custom-accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                Past Opportunities
+              </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#pastOpportunitiesAccordion">
+              <div class="accordion-body custom-accordion-body">
+                <!-- Example of a past opportunity card -->
+                <div class="opportunity-card card mb-4 on-site internship cornell" data-date="2024-06-10">
+                  <div class="row g-0">
+                    <div class="col-md-4 d-flex align-items-center justify-content-center">
+                      <img src="images/irc.jpeg" class="img-fluid rounded-start" alt="Opportunity Image">
+                    </div>
+                    <div class="col-md-8">
+                      <div class="card-body">
+                        <h5 class="card-title">[Cornell students only] Costing Analysis Evidence Mapping Intern with the <a
+                            href="https://www.rescue.org/" class="text-decoration-underline" target="_blank">International
+                            Rescue Committee (IRC)</a></h5>
+                        <p class="card-text"><strong>IRC Supervisor:</strong> Mikaela Cochran, Advisor, Best Use of Resources</p>
+                        <p class="card-text"><strong>CIDER Faculty Supervisors:</strong> <a
+                            href="https://barrett.dyson.cornell.edu/">Chris Barrett</a>, <a
+                            href="https://facultyprofiles.tufts.edu/jenny-aker">Jenny Aker</a></p>
+                        <p class="card-text"><strong>Anticipated Duration:</strong> Fall term (August 26 – December 9, 2024)</p>
+                        <p class="card-text"><strong>Application Materials:</strong> Send to <a
+                            href="mailto:CIDER@cornell.edu">CIDER@cornell.edu</a> (i) a resume, (ii) academic transcript(s), and
+                          (iii) a statement of interest (not to exceed two pages)</p>
+                        <p class="card-text deadline"><strong>Deadline:</strong> June 10, 2024</p>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                          data-bs-target="#opportunityModal">Read More</button>
+                      </div>
+                    </div>
+                  </div>
                 </div>
+                <!-- More past opportunity cards can be added here -->
               </div>
             </div>
           </div>
-      
-          <!-- More past opportunity cards can be added here -->
         </div>
+        
+        
       </div>
       
       
