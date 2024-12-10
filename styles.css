@@ -353,7 +353,7 @@ body.dark-mode .dropicon {
 .opportunity-card:hover {
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
     transform: translateY(-5px);
-    cursor: pointer;
+    /* cursor: pointer; */
 }
 
 .opportunity-card a {
